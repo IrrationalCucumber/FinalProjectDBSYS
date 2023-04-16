@@ -17,6 +17,9 @@ namespace Gourmet_s_Record
             InitializeComponent();
         }
 
+        public string AccountName;
+        public int userID;
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -28,6 +31,11 @@ namespace Gourmet_s_Record
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
         {
 
         }

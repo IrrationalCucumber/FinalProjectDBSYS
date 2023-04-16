@@ -12,11 +12,13 @@ namespace Gourmet_s_Record
 {
     public partial class SignIn : Form
     {
+        public string accountName;
+        public int id;
         public SignIn()
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             
