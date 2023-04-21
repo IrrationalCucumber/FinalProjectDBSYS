@@ -126,6 +126,7 @@ namespace Gourmet_s_Record
             this.lbMessage.Size = new System.Drawing.Size(120, 20);
             this.lbMessage.TabIndex = 10;
             this.lbMessage.Text = "Error message";
+            this.lbMessage.Click += new System.EventHandler(this.lbMessage_Click);
             // 
             // btSignIn
             // 

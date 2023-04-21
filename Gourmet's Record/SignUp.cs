@@ -55,5 +55,11 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        //Error message sa password
+        private void lbMessage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
