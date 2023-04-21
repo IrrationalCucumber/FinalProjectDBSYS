@@ -28,5 +28,10 @@ namespace Gourmet_s_Record
         {
             
         }
+
+        private void lbMessage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

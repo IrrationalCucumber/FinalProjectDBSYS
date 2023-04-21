@@ -20,7 +20,8 @@ namespace Gourmet_s_Record
         public string AccountName;
         public int userID;
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        //Confirm Password
+        private void UptbConPass_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -36,6 +37,21 @@ namespace Gourmet_s_Record
         }
 
         private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Enter Username
+        private void UptbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //Enter Password
+        private void UptbEnPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
