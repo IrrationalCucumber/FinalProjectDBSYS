@@ -13,4 +13,5 @@ DBSYS final project repo
 
 * buhati og mga forms 
 * bahalag dli tanan mabuhatan og forms
-** unya nlng sa ang sa admin
+* unya nlng sa ang sa admin nga side
+* pun an pani nga list
