@@ -14,29 +14,29 @@ create table ACCOUNTS
 	PRIMARY KEY (userID)
 )
 
-create table RECIPE
+create table ARTWORKS
 (
-	recipeID int IDENTITY (1, 1) NOT NULL,
-	recipeName varchar(50),
-	recipeMainIngredient varchar(30),
-	recipeIngredients varchar(MAX),
-	recipeSteps varchar(MAX),
-	recipeSteps2 varchar(max),
-	recipeImage image,
-	recipeType varchar(20),
-	PRIMARY KEY (recipeID)
-)
-
-create table BOOKMARK
-(
-	bookmarkID int,
+	artID int IDENTITY (1,1),
 	userID int,
-	recipeID int,
-	primary key (bookmarkID),
-	FOREIGN KEY (userID) REFERENCES ACCOUNTS(userID),
-	FOREIGN KEY (recipeID) REFERENCES RECIPE(recipeID)
+	artTitle varchar(50),
+	artType varchar(30),
+	artDescription text,
+	artImage image,
+	PRIMARY KEY (artID),
+	--FOREIGN KEY (userID) references ACCOUNTS(userID)
 )
 
-drop table ACCOUNTS
+create table COMMENTS
+(
+	commentID int IDENTITY (1,1),
+	commentText text,
+	userID int,
+	artID int
+)
 
-select * from ACCOUNTS
+
+
+
+drop table RECIPE
+
+select * from BOOKMARK
