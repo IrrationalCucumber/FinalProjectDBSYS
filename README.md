@@ -7,9 +7,10 @@ DBSYS final project repo
 2. account type(artist/buyer)
 3. sign in account
 4. upload artwork
-5. profile window
-6. home
+5. User profile window
+6. home(display uploaded artwork)
 7. artwork window
+8. Transaction(buyer)
 
 * buhati og mga forms 
 * bahalag dli tanan mabuhatan og forms
