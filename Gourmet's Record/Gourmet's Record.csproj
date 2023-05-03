@@ -107,12 +107,42 @@
     <Compile Include="Bookmark.Designer.cs">
       <DependentUpon>Bookmark.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyerAccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyerAccountProfile.Designer.cs">
+      <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyerTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyerTransaction.Designer.cs">
+      <DependentUpon>BuyerTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encryption.cs" />
+    <Compile Include="artistAccountPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="artistAccountPage.Designer.cs">
+      <DependentUpon>artistAccountPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
@@ -128,14 +158,32 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transactionlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactionlist.Designer.cs">
+      <DependentUpon>Transactionlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserList.Designer.cs">
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="artistAccountPage.resx">
+      <DependentUpon>artistAccountPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyerAccountProfile.resx">
+      <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyerTransaction.resx">
+      <DependentUpon>BuyerTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
@@ -152,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactionlist.resx">
+      <DependentUpon>Transactionlist.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -181,6 +232,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\OIP %283%291.jpg" />
+    <None Include="Resources\5e4e51034d59113f1b223c9cdc3f3743.jpg" />
+    <None Include="Resources\OIP %283%29.jpg" />
+    <None Include="Resources\OIP %282%29.jpg" />
+    <None Include="Resources\339866624_755653629587401_1391695679254743025_n.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

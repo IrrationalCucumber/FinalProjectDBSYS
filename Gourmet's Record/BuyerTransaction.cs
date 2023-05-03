@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class SignUp : Form
+    public partial class BuyerTransaction : Form
     {
-        public SignUp()
+        public BuyerTransaction()
         {
             InitializeComponent();
-        }
-
-        public string AccountName;
-        public int userID;
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -30,12 +22,7 @@ namespace Gourmet_s_Record
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SignUp_Load(object sender, EventArgs e)
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
