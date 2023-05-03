@@ -148,9 +148,9 @@ namespace Gourmet_s_Record
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(559, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(580, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 169);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -224,7 +224,8 @@ namespace Gourmet_s_Record
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.OIP__3_1;
+            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.yy1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);

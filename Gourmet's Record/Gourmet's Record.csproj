@@ -232,6 +232,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\yy1.jpg" />
+    <None Include="Resources\yy.jpg" />
+    <None Include="Resources\tt.jpg" />
+    <None Include="Resources\31a73e77032b7dc16248b49793556caa1.jpg" />
+    <None Include="Resources\31a73e77032b7dc16248b49793556caa.jpg" />
     <None Include="Resources\OIP %283%291.jpg" />
     <None Include="Resources\5e4e51034d59113f1b223c9cdc3f3743.jpg" />
     <None Include="Resources\OIP %283%29.jpg" />

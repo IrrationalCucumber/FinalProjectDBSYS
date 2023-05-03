@@ -223,9 +223,10 @@ namespace Gourmet_s_Record
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(646, 24);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(625, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 160);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -233,7 +234,7 @@ namespace Gourmet_s_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.OIP__2_;
+            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._31a73e77032b7dc16248b49793556caa1;
             this.ClientSize = new System.Drawing.Size(832, 505);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
