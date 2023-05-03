@@ -225,13 +225,6 @@
     <None Include="Resources\person-4-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\yy1.jpg" />
     <None Include="Resources\yy.jpg" />
     <None Include="Resources\tt.jpg" />

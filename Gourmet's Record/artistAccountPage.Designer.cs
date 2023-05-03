@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class artistAccountPage
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
