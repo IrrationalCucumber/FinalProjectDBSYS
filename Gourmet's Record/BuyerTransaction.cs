@@ -26,5 +26,10 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        private void BuyerTransaction_Load(object sender, EventArgs e)
+        {
+            //hello
+        }
     }
 }
