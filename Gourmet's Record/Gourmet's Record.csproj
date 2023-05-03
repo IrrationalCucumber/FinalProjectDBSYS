@@ -232,6 +232,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\dashing1.png" />
+    <None Include="Resources\dashing.png" />
     <None Include="Resources\yy1.jpg" />
     <None Include="Resources\yy.jpg" />
     <None Include="Resources\tt.jpg" />

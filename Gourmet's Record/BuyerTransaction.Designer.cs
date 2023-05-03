@@ -37,7 +37,7 @@ namespace Gourmet_s_Record
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnconfirm = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -146,17 +146,18 @@ namespace Gourmet_s_Record
             this.label8.TabIndex = 7;
             this.label8.Text = "Address";
             // 
-            // button1
+            // btnconfirm
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(82, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnconfirm.BackColor = System.Drawing.Color.Silver;
+            this.btnconfirm.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconfirm.ForeColor = System.Drawing.Color.Black;
+            this.btnconfirm.Location = new System.Drawing.Point(82, 385);
+            this.btnconfirm.Name = "btnconfirm";
+            this.btnconfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnconfirm.TabIndex = 8;
+            this.btnconfirm.Text = "Confirm";
+            this.btnconfirm.UseVisualStyleBackColor = false;
+            this.btnconfirm.Click += new System.EventHandler(this.btnconfirm_Click);
             // 
             // button2
             // 
@@ -244,7 +245,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnconfirm);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -272,7 +273,7 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnconfirm;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
