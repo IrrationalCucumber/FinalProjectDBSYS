@@ -11,7 +11,8 @@ create table ACCOUNTS
 	FirstName varchar(30),
 	email varchar(50),
 	accountType varchar(10),
-	PRIMARY KEY (userID)
+	contactNum int,
+	PRIMARY KEY (username)
 )
 
 create table ARTWORKS
@@ -19,11 +20,14 @@ create table ARTWORKS
 	artID int IDENTITY (1,1),
 	userID int,
 	artTitle varchar(50),
+	artWidth int,
+	artHeight int,
+	artPrice int,
 	artType varchar(30),
 	artDescription text,
 	artImage image,
 	PRIMARY KEY (artID),
-	--FOREIGN KEY (userID) references ACCOUNTS(userID)
+	FOREIGN KEY (username) references ACCOUNTS(username)
 )
 
 create table COMMENTS
@@ -32,6 +36,13 @@ create table COMMENTS
 	commentText text,
 	userID int,
 	artID int
+)
+create table TRANSACTION
+(
+	transactionID int IDENTITY (1,1)
+	username varchar(30),
+	artID int,
+	FOREIGN KEY (artID)
 )
 
 
