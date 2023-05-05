@@ -11,32 +11,39 @@ create table ACCOUNTS
 	FirstName varchar(30),
 	email varchar(50),
 	accountType varchar(10),
-	PRIMARY KEY (userID)
+	contactNum int,
+	PRIMARY KEY (username)
 )
 
-create table RECIPE
+create table ARTWORKS
 (
-	recipeID int IDENTITY (1, 1) NOT NULL,
-	recipeName varchar(50),
-	recipeMainIngredient varchar(30),
-	recipeIngredients varchar(MAX),
-	recipeSteps varchar(MAX),
-	recipeSteps2 varchar(max),
-	recipeImage image,
-	recipeType varchar(20),
-	PRIMARY KEY (recipeID)
-)
-
-create table BOOKMARK
-(
-	bookmarkID int,
+	artID int IDENTITY (1,1),
 	userID int,
-	recipeID int,
-	primary key (bookmarkID),
-	FOREIGN KEY (userID) REFERENCES ACCOUNTS(userID),
-	FOREIGN KEY (recipeID) REFERENCES RECIPE(recipeID)
+	artTitle varchar(50),
+	artWidth int,
+	artHeight int,
+	artPrice int,
+	artType varchar(30),
+	artDescription text,
+	artImage image,
+	PRIMARY KEY (artID),
+	FOREIGN KEY (username) references ACCOUNTS(username)
 )
 
+create table COMMENTS
+(
+	commentID int IDENTITY (1,1),
+	commentText text,
+	userID int,
+	artID int
+)
+create table TRANSACTION
+(
+	transactionID int IDENTITY (1,1)
+	username varchar(30),
+	artID int,
+	FOREIGN KEY (artID)
+)
 drop table ACCOUNTS
 
 select * from ACCOUNTS
