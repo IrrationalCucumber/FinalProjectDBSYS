@@ -39,10 +39,10 @@ namespace Gourmet_s_Record
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.chStyle4 = new System.Windows.Forms.CheckBox();
+            this.chStyle3 = new System.Windows.Forms.CheckBox();
+            this.chStyle2 = new System.Windows.Forms.CheckBox();
+            this.chStyle1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbPriceRange4 = new System.Windows.Forms.CheckBox();
             this.cbPriceRange3 = new System.Windows.Forms.CheckBox();
@@ -59,11 +59,13 @@ namespace Gourmet_s_Record
             // 
             // menu
             // 
+            this.menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.menu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menu.Dock = System.Windows.Forms.DockStyle.None;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msName});
-            this.menu.Location = new System.Drawing.Point(698, 9);
+            this.menu.Location = new System.Drawing.Point(688, 19);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menu.Size = new System.Drawing.Size(115, 40);
@@ -154,10 +156,10 @@ namespace Gourmet_s_Record
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.checkBox8);
-            this.groupBox3.Controls.Add(this.checkBox7);
-            this.groupBox3.Controls.Add(this.checkBox6);
-            this.groupBox3.Controls.Add(this.checkBox5);
+            this.groupBox3.Controls.Add(this.chStyle4);
+            this.groupBox3.Controls.Add(this.chStyle3);
+            this.groupBox3.Controls.Add(this.chStyle2);
+            this.groupBox3.Controls.Add(this.chStyle1);
             this.groupBox3.Location = new System.Drawing.Point(7, 197);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(183, 216);
@@ -165,45 +167,45 @@ namespace Gourmet_s_Record
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Style";
             // 
-            // checkBox8
+            // chStyle4
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(24, 88);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(38, 17);
-            this.checkBox8.TabIndex = 3;
-            this.checkBox8.Text = "Oil";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chStyle4.AutoSize = true;
+            this.chStyle4.Location = new System.Drawing.Point(24, 88);
+            this.chStyle4.Name = "chStyle4";
+            this.chStyle4.Size = new System.Drawing.Size(38, 17);
+            this.chStyle4.TabIndex = 3;
+            this.chStyle4.Text = "Oil";
+            this.chStyle4.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // chStyle3
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(24, 65);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(57, 17);
-            this.checkBox7.TabIndex = 2;
-            this.checkBox7.Text = "Acrylic";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chStyle3.AutoSize = true;
+            this.chStyle3.Location = new System.Drawing.Point(24, 65);
+            this.chStyle3.Name = "chStyle3";
+            this.chStyle3.Size = new System.Drawing.Size(57, 17);
+            this.chStyle3.TabIndex = 2;
+            this.chStyle3.Text = "Acrylic";
+            this.chStyle3.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chStyle2
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(24, 42);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(55, 17);
-            this.checkBox6.TabIndex = 1;
-            this.checkBox6.Text = "Digital";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chStyle2.AutoSize = true;
+            this.chStyle2.Location = new System.Drawing.Point(24, 42);
+            this.chStyle2.Name = "chStyle2";
+            this.chStyle2.Size = new System.Drawing.Size(55, 17);
+            this.chStyle2.TabIndex = 1;
+            this.chStyle2.Text = "Digital";
+            this.chStyle2.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chStyle1
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(24, 19);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(78, 17);
-            this.checkBox5.TabIndex = 0;
-            this.checkBox5.Text = "Watercolor";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chStyle1.AutoSize = true;
+            this.chStyle1.Location = new System.Drawing.Point(24, 19);
+            this.chStyle1.Name = "chStyle1";
+            this.chStyle1.Size = new System.Drawing.Size(78, 17);
+            this.chStyle1.TabIndex = 0;
+            this.chStyle1.Text = "Watercolor";
+            this.chStyle1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -298,6 +300,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.menu);
             this.MainMenuStrip = this.menu;
             this.Name = "adminHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.menu.ResumeLayout(false);
@@ -326,15 +329,15 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox chStyle2;
+        private System.Windows.Forms.CheckBox chStyle1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox cbPriceRange4;
         private System.Windows.Forms.CheckBox cbPriceRange3;
         private System.Windows.Forms.CheckBox cbPriceRange2;
         private System.Windows.Forms.CheckBox cbPriceRange1;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox chStyle4;
+        private System.Windows.Forms.CheckBox chStyle3;
         private System.Windows.Forms.CheckBox cbPriceRange6;
         private System.Windows.Forms.CheckBox cbPriceRange5;
     }

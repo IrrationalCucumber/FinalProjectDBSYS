@@ -98,6 +98,11 @@ namespace Gourmet_s_Record
                 //dataGridView1.DataSource = dtbl;
             }
             else {
+                cbPriceRange2.Checked = false;
+                cbPriceRange3.Checked = false;
+                cbPriceRange4.Checked = false;
+                cbPriceRange5.Checked = false;
+                cbPriceRange6.Checked = false;
                 cbPriceRange1.Checked = true;
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
                     "AND artPrice IN (0,200)" +
@@ -124,6 +129,11 @@ namespace Gourmet_s_Record
             else
             {
                 cbPriceRange2.Checked = true;
+                cbPriceRange1.Checked = false;
+                cbPriceRange3.Checked = false;
+                cbPriceRange4.Checked = false;
+                cbPriceRange5.Checked = false;
+                cbPriceRange6.Checked = false;
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
                     "AND artPrice IN (200,400)" +
                     "ORDER BY artPrice ASC", cn);
@@ -149,6 +159,11 @@ namespace Gourmet_s_Record
             else
             {
                 cbPriceRange3.Checked = true;
+                cbPriceRange2.Checked = false;
+                cbPriceRange1.Checked = false;
+                cbPriceRange4.Checked = false;
+                cbPriceRange5.Checked = false;
+                cbPriceRange6.Checked = false;
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
                     "AND artPrice IN (400,600)" +
                     "ORDER BY artPrice ASC", cn);
@@ -174,6 +189,11 @@ namespace Gourmet_s_Record
             else
             {
                 cbPriceRange4.Checked = true;
+                cbPriceRange2.Checked = false;
+                cbPriceRange3.Checked = false;
+                cbPriceRange1.Checked = false;
+                cbPriceRange5.Checked = false;
+                cbPriceRange6.Checked = false;
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
                     "AND artPrice IN (600,800)" +
                     "ORDER BY artPrice ASC", cn);
@@ -199,6 +219,11 @@ namespace Gourmet_s_Record
             else
             {
                 cbPriceRange5.Checked = true;
+                cbPriceRange2.Checked = false;
+                cbPriceRange3.Checked = false;
+                cbPriceRange4.Checked = false;
+                cbPriceRange1.Checked = false;
+                cbPriceRange6.Checked = false;
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
                     "AND artPrice IN (800,1000)" +
                     "ORDER BY artPrice ASC", cn);
@@ -224,6 +249,11 @@ namespace Gourmet_s_Record
             else
             {
                 cbPriceRange6.Checked = true;
+                cbPriceRange2.Checked = false;
+                cbPriceRange3.Checked = false;
+                cbPriceRange4.Checked = false;
+                cbPriceRange5.Checked = false;
+                cbPriceRange1.Checked = false;
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
                     "AND artPrice IN (1000,99999999)" +
                     "ORDER BY artPrice ASC", cn);
