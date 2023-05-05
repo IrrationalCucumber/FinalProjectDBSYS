@@ -101,6 +101,12 @@
     <Compile Include="AccountPage.Designer.cs">
       <DependentUpon>AccountPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Artist_Upload_Artwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artist_Upload_Artwork.Designer.cs">
+      <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bookmark.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +132,11 @@
     <Compile Include="artistAccountPage.Designer.cs">
       <DependentUpon>artistAccountPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Artwork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Artwork.Designer.cs">
+      <DependentUpon>Artwork.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -164,6 +170,12 @@
     <Compile Include="Transactionlist.Designer.cs">
       <DependentUpon>Transactionlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePassword.Designer.cs">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +185,17 @@
     <EmbeddedResource Include="artistAccountPage.resx">
       <DependentUpon>artistAccountPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Artist_Upload_Artwork.resx">
+      <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuyerAccountProfile.resx">
       <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyerTransaction.resx">
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artwork.resx">
+      <DependentUpon>Artwork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -203,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transactionlist.resx">
       <DependentUpon>Transactionlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePassword.resx">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -247,6 +271,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

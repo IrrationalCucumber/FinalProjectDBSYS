@@ -47,7 +47,7 @@ namespace Gourmet_s_Record
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(259, 163);
+            this.label1.Location = new System.Drawing.Point(257, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 48);
@@ -57,7 +57,7 @@ namespace Gourmet_s_Record
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(143, 258);
+            this.tbUsername.Location = new System.Drawing.Point(146, 244);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(436, 26);
@@ -66,7 +66,7 @@ namespace Gourmet_s_Record
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(143, 345);
+            this.tbPassword.Location = new System.Drawing.Point(146, 332);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(436, 26);
@@ -103,7 +103,7 @@ namespace Gourmet_s_Record
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 233);
+            this.label2.Location = new System.Drawing.Point(83, 208);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
@@ -116,7 +116,7 @@ namespace Gourmet_s_Record
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 320);
+            this.label3.Location = new System.Drawing.Point(83, 307);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
@@ -140,7 +140,7 @@ namespace Gourmet_s_Record
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(400, 581);
+            this.linkLabel1.Location = new System.Drawing.Point(410, 564);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(66, 20);
             this.linkLabel1.TabIndex = 15;
@@ -152,7 +152,7 @@ namespace Gourmet_s_Record
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label5.Location = new System.Drawing.Point(215, 581);
+            this.label5.Location = new System.Drawing.Point(225, 564);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 20);
             this.label5.TabIndex = 14;
@@ -162,8 +162,9 @@ namespace Gourmet_s_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(669, 627);
+            this.ClientSize = new System.Drawing.Size(669, 671);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbMessage);

@@ -31,5 +31,45 @@ namespace Gourmet_s_Record
         {
 
         }
+//textbox for artist profile
+        private void tbAUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbAFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbALastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbAEmalAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbAContactNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+//buttons
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

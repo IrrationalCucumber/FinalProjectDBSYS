@@ -79,5 +79,47 @@ namespace Gourmet_s_Record
            
 
         }
+
+      //  private void tbAccT_TextChanged(object sender, EventArgs e)
+      //  {
+
+      //  }
+
+//textbox and combo box for user input
+        //account type combobox
+        private void cbAcctType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbFirstname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbLastname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
