@@ -8,7 +8,7 @@ create table ACCOUNTS
 	username varchar(20) NOT NULL,
 	password varchar(20),
 	accountType varchar(10),
-	accountVerified varchar(10) default 'verified',
+	accountVerified varchar(10) default 'unverified',
 	dateAdded date,
 	PRIMARY KEY (username)
 )
@@ -40,7 +40,7 @@ create table ARTWORKS
 	artDescription text,
 	artImage image,
 	artAvailable varchar(10),
-	artVerified varchar(10) DEFAULT 'not verified',
+	artVerified varchar(10) DEFAULT 'unverified',
 	dateAdded date,
 	PRIMARY KEY (artID),
 	FOREIGN KEY (username) references ACCOUNTS(username)
