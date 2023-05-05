@@ -49,24 +49,26 @@ namespace Gourmet_s_Record
             this.btEdit = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pbBuyer = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.pbBuyer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBuyer)).BeginInit();
             this.SuspendLayout();
             // 
             // btUpload
             // 
-            this.btUpload.Location = new System.Drawing.Point(204, 358);
+            this.btUpload.BackColor = System.Drawing.Color.RosyBrown;
+            this.btUpload.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btUpload.Location = new System.Drawing.Point(185, 358);
             this.btUpload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btUpload.Name = "btUpload";
-            this.btUpload.Size = new System.Drawing.Size(112, 35);
+            this.btUpload.Size = new System.Drawing.Size(155, 36);
             this.btUpload.TabIndex = 75;
             this.btUpload.Text = "Upload";
-            this.btUpload.UseVisualStyleBackColor = true;
+            this.btUpload.UseVisualStyleBackColor = false;
             // 
             // tbProv
             // 
@@ -185,7 +187,7 @@ namespace Gourmet_s_Record
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(477, 361);
+            this.label5.Location = new System.Drawing.Point(477, 358);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 24);
@@ -242,7 +244,7 @@ namespace Gourmet_s_Record
             // 
             // btEdit
             // 
-            this.btEdit.BackColor = System.Drawing.Color.Silver;
+            this.btEdit.BackColor = System.Drawing.Color.RosyBrown;
             this.btEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEdit.Location = new System.Drawing.Point(929, 470);
             this.btEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -254,7 +256,7 @@ namespace Gourmet_s_Record
             // 
             // btSave
             // 
-            this.btSave.BackColor = System.Drawing.Color.Silver;
+            this.btSave.BackColor = System.Drawing.Color.RosyBrown;
             this.btSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSave.Location = new System.Drawing.Point(929, 541);
             this.btSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -267,8 +269,8 @@ namespace Gourmet_s_Record
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.RosyBrown;
+            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(884, 14);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -277,18 +279,6 @@ namespace Gourmet_s_Record
             this.button1.TabIndex = 56;
             this.button1.Text = "HOME";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pbBuyer
-            // 
-            this.pbBuyer.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pbBuyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbBuyer.Location = new System.Drawing.Point(138, 85);
-            this.pbBuyer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pbBuyer.Name = "pbBuyer";
-            this.pbBuyer.Size = new System.Drawing.Size(245, 245);
-            this.pbBuyer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbBuyer.TabIndex = 55;
-            this.pbBuyer.TabStop = false;
             // 
             // label8
             // 
@@ -335,11 +325,24 @@ namespace Gourmet_s_Record
             this.label12.TabIndex = 81;
             this.label12.Text = "Province";
             // 
+            // pbBuyer
+            // 
+            this.pbBuyer.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbBuyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBuyer.Location = new System.Drawing.Point(138, 85);
+            this.pbBuyer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbBuyer.Name = "pbBuyer";
+            this.pbBuyer.Size = new System.Drawing.Size(245, 245);
+            this.pbBuyer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBuyer.TabIndex = 55;
+            this.pbBuyer.TabStop = false;
+            // 
             // BuyerAccountProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1093, 649);
             this.Controls.Add(this.label12);
