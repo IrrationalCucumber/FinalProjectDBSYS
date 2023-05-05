@@ -51,6 +51,7 @@ namespace Gourmet_s_Record
         {
 
         }
+        public static string AccountName;
 
         private void btSignIn_Click(object sender, EventArgs e)
         {
@@ -69,15 +70,16 @@ namespace Gourmet_s_Record
                 }
                 else if (!dt.HasRows)
                 {
-                    MessageBox.Show("Username or Password incorrect", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lbMessage.Text = "Username or Password incorrect";
                 }
 
                 else if (dt.HasRows)
                 {
-                    if (tbUsername.Text == "Admin")
+                    if (tbUsername.Text == "admin")
                     {
                         MessageBox.Show("Success! Welcome: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        AccountName = tbUsername.Text;
                         this.Close();
                         th = new Thread(gotoHome);
                         th.SetApartmentState(ApartmentState.STA);
@@ -87,6 +89,8 @@ namespace Gourmet_s_Record
                     else
                     {
                         MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        AccountName = tbUsername.Text;
                         this.Close();
                         th = new Thread(gotoHome);
                         th.SetApartmentState(ApartmentState.STA);
