@@ -16,7 +16,7 @@ namespace Gourmet_s_Record
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BuyerAccountProfile());
+            Application.Run(new adminHome());
         }
     }
 }

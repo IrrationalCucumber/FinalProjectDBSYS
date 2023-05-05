@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class Form2
+    partial class artistTransactionList
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace Gourmet_s_Record
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            this.Text = "artistTransactionList";
         }
 
         #endregion

@@ -19,7 +19,7 @@ namespace Gourmet_s_Record
 
         private void Home_Load(object sender, EventArgs e)
         {
-            
+            msName.Text = SignIn.AccountName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +45,20 @@ namespace Gourmet_s_Record
         private void comboBox1_MeasureItem(object sender, MeasureItemEventArgs e)
         {
            
+        }
+
+        private void accountListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            adminAccountList al = new adminAccountList();
+            al.Show();
+        }
+
+        private void mToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            adminArtowrkList at = new adminArtowrkList();
+            at.Close();
         }
     }
 }

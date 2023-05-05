@@ -101,11 +101,23 @@
     <Compile Include="AccountPage.Designer.cs">
       <DependentUpon>AccountPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminArtowrkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminArtowrkList.Designer.cs">
+      <DependentUpon>adminArtowrkList.cs</DependentUpon>
+    </Compile>
     <Compile Include="ArtistAccountProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ArtistAccountProfile.Designer.cs">
       <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="artistTransactionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="artistTransactionList.Designer.cs">
+      <DependentUpon>artistTransactionList.cs</DependentUpon>
     </Compile>
     <Compile Include="BuyerAccountProfile.cs">
       <SubType>Form</SubType>
@@ -120,12 +132,6 @@
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="adminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,11 +158,11 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transactionlist.cs">
+    <Compile Include="buyerTransactionList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transactionlist.Designer.cs">
-      <DependentUpon>Transactionlist.cs</DependentUpon>
+    <Compile Include="buyerTransactionList.Designer.cs">
+      <DependentUpon>buyerTransactionList.cs</DependentUpon>
     </Compile>
     <Compile Include="adminAccountList.cs">
       <SubType>Form</SubType>
@@ -166,6 +172,9 @@
     </Compile>
     <EmbeddedResource Include="adminAccountList.resx">
       <DependentUpon>adminAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminArtowrkList.resx">
+      <DependentUpon>adminArtowrkList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArtistAccountProfile.resx">
       <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
@@ -198,8 +207,8 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transactionlist.resx">
-      <DependentUpon>Transactionlist.cs</DependentUpon>
+    <EmbeddedResource Include="buyerTransactionList.resx">
+      <DependentUpon>buyerTransactionList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
