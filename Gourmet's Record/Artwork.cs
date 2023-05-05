@@ -16,5 +16,57 @@ namespace Gourmet_s_Record
         {
             InitializeComponent();
         }
+//buttons
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+//label para mo display ang gi inputs sa artist
+        private void lbTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbArtist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbLength_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbWidth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDecript_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

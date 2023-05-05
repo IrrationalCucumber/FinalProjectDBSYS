@@ -31,5 +31,10 @@ namespace Gourmet_s_Record
         {
             //hello
         }
+
+        private void tbBTContact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

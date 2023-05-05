@@ -21,5 +21,10 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        private void BuyerAccountProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
