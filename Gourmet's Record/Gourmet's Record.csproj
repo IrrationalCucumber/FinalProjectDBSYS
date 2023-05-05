@@ -107,12 +107,6 @@
     <Compile Include="ArtistAccountProfile.Designer.cs">
       <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="artistEditProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="artistEditProfile.Designer.cs">
-      <DependentUpon>artistEditProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="BuyerAccountProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArtistAccountProfile.resx">
       <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="artistEditProfile.resx">
-      <DependentUpon>artistEditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyerAccountProfile.resx">
       <DependentUpon>BuyerAccountProfile.cs</DependentUpon>

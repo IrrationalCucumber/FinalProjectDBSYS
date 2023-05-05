@@ -19,9 +19,19 @@ namespace Gourmet_s_Record
 
         private void button3_Click(object sender, EventArgs e)
         {
-            artistEditProfile edit = new artistEditProfile();
-            this.Close();
-            edit.Show();
+            btCancel.Visible = true;
+            btSave.Visible = true;
+            tbUsername.ReadOnly = false;
+            tbFN.ReadOnly = false;
+            tbLN.ReadOnly = false;
+            tbEmail.ReadOnly = false;
+            tbCN.ReadOnly = false;
+            tbProv.ReadOnly = false;
+            tbCity.ReadOnly = false;
+            tbBrngy.ReadOnly = false;
+            tbStreet.ReadOnly = false;
+            tbHouse.ReadOnly = false;
+            tbDesc.ReadOnly = false;
         }
 
         private void ArtistAccountProfile_Load(object sender, EventArgs e)

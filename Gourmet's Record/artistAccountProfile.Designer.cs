@@ -51,6 +51,8 @@ namespace Gourmet_s_Record
             this.tbDesc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btUpload = new System.Windows.Forms.Button();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).BeginInit();
             this.SuspendLayout();
             // 
@@ -276,11 +278,38 @@ namespace Gourmet_s_Record
             this.btUpload.UseVisualStyleBackColor = true;
             this.btUpload.Click += new System.EventHandler(this.btUpload_Click);
             // 
+            // btCancel
+            // 
+            this.btCancel.BackColor = System.Drawing.Color.Silver;
+            this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancel.ForeColor = System.Drawing.Color.Black;
+            this.btCancel.Location = new System.Drawing.Point(119, 485);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(75, 29);
+            this.btCancel.TabIndex = 64;
+            this.btCancel.Text = "CANCEL";
+            this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Visible = false;
+            // 
+            // btSave
+            // 
+            this.btSave.BackColor = System.Drawing.Color.Silver;
+            this.btSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSave.Location = new System.Drawing.Point(291, 485);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(79, 29);
+            this.btSave.TabIndex = 63;
+            this.btSave.Text = "SAVE";
+            this.btSave.UseVisualStyleBackColor = false;
+            this.btSave.Visible = false;
+            // 
             // ArtistAccountProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 539);
+            this.Controls.Add(this.btCancel);
+            this.Controls.Add(this.btSave);
             this.Controls.Add(this.btUpload);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbDesc);
@@ -304,7 +333,9 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ArtistAccountProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ArtistAccountProfile";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ArtistAccountProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbArtist)).EndInit();
             this.ResumeLayout(false);
@@ -336,5 +367,7 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.TextBox tbDesc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btUpload;
+        private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.Button btSave;
     }
 }
