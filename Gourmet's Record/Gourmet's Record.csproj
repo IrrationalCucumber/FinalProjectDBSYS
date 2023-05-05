@@ -101,11 +101,17 @@
     <Compile Include="AccountPage.Designer.cs">
       <DependentUpon>AccountPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bookmark.cs">
+    <Compile Include="ArtistAccountProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bookmark.Designer.cs">
-      <DependentUpon>Bookmark.cs</DependentUpon>
+    <Compile Include="ArtistAccountProfile.Designer.cs">
+      <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="artistEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="artistEditProfile.Designer.cs">
+      <DependentUpon>artistEditProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="BuyerAccountProfile.cs">
       <SubType>Form</SubType>
@@ -120,29 +126,23 @@
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
-    <Compile Include="artistAccountPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="artistAccountPage.Designer.cs">
-      <DependentUpon>artistAccountPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminHome.Designer.cs">
+      <DependentUpon>adminHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Homepage.Designer.cs">
-      <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
@@ -164,14 +164,20 @@
     <Compile Include="Transactionlist.Designer.cs">
       <DependentUpon>Transactionlist.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserList.cs">
+    <Compile Include="adminAccountList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserList.Designer.cs">
-      <DependentUpon>UserList.cs</DependentUpon>
+    <Compile Include="adminAccountList.Designer.cs">
+      <DependentUpon>adminAccountList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="artistAccountPage.resx">
-      <DependentUpon>artistAccountPage.cs</DependentUpon>
+    <EmbeddedResource Include="adminAccountList.resx">
+      <DependentUpon>adminAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtistAccountProfile.resx">
+      <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="artistEditProfile.resx">
+      <DependentUpon>artistEditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyerAccountProfile.resx">
       <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
@@ -179,11 +185,11 @@
     <EmbeddedResource Include="BuyerTransaction.resx">
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adminHome.resx">
+      <DependentUpon>adminHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Homepage.resx">
-      <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>

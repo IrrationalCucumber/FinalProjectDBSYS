@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class Bookmark
+    partial class adminHome
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,19 @@ namespace Gourmet_s_Record
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // adminHome
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Bookmark";
+            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.OIP__3_;
+            this.ClientSize = new System.Drawing.Size(827, 522);
+            this.Name = "adminHome";
+            this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

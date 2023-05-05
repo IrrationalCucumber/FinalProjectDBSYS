@@ -25,7 +25,7 @@ namespace Gourmet_s_Record
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
         public void gotoHome(object obj)
         {
-            Application.Run(new Homepage());
+            Application.Run(new Home());
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -52,6 +52,9 @@ namespace Gourmet_s_Record
 
         }
         public static string AccountName;
+        public static bool isAdmin;
+        public static bool isArtist;
+        public static bool isBuyer;
 
         private void btSignIn_Click(object sender, EventArgs e)
         {
@@ -75,21 +78,37 @@ namespace Gourmet_s_Record
 
                 else if (dt.HasRows)
                 {
-                    if (tbUsername.Text == "admin")
+                    SqlCommand command = new SqlCommand("SELECT accountType FROM Users WHERE username=@username", con);
+                    command.Parameters.AddWithValue("@username", tbUsername.Text);
+
+                    // Execute the command and retrieve the user type
+                    string type = (string)command.ExecuteScalar();
+
+                    if (type == "admin")
                     {
                         MessageBox.Show("Success! Welcome: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        isAdmin = true;
+                        AccountName = tbUsername.Text;
+                        this.Close();
+                        adminHome home = new adminHome();
+                        home.Show();
+                    }
 
+                    else if(type == "artist")
+                    {
+                        MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        isArtist = true;
                         AccountName = tbUsername.Text;
                         this.Close();
                         th = new Thread(gotoHome);
                         th.SetApartmentState(ApartmentState.STA);
                         th.Start();
-                    }
 
+                    }
                     else
                     {
                         MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+                        isBuyer = true;
                         AccountName = tbUsername.Text;
                         this.Close();
                         th = new Thread(gotoHome);

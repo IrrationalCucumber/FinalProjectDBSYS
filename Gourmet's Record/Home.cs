@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace Gourmet_s_Record
 {
@@ -17,39 +18,63 @@ namespace Gourmet_s_Record
             InitializeComponent();
         }
 
-        private void Home_Load(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            groupBox1.Hide();
-            button3.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            // Point x = 113, 359;
-            if (groupBox1.Visible == false)
+            if (SignIn.isBuyer == true)
             {
-                groupBox1.Show();
-                //button2.Location = x;
-                button2.Hide();
-                button3.Show();
+                this.Close();
+                BuyerAccountProfile ap = new BuyerAccountProfile();
+                ap.Show();
             }
+            else if (SignIn.isArtist == true)
+            {
+                this.Close();
+                //artistAccountPage ap = new artistAccountPage();
+                //ap.show();
+            }
+            else {
+                SignIn si = new SignIn();
+                si.Show();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Homepage_Load(object sender, EventArgs e)
         {
-            if(groupBox1.Visible == true)
+            
+            if (SignIn.isBuyer == true || SignIn.isArtist == true)
             {
-                groupBox1.Hide();
-                button2.Show();
-                button3.Hide();
+                btAP.Text = SignIn.AccountName;
+                if (SignIn.isArtist == true)
+                {
+                    btUpload.Visible = true;
+                }
             }
+            else{
+                btAP.Text = "Sign In";
+                btSI.Visible = false;
+            }
+
+        }
+
+        private void btSI_Click(object sender, EventArgs e)
+        {
+            SignIn si = new SignIn();
+            si.Show();
         }
     }
 }

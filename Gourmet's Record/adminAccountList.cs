@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class Form1 : Form
+    public partial class adminAccountList : Form
     {
-        public Form1()
+        public adminAccountList()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
+        private void cbVerified_CheckedChanged(object sender, EventArgs e)
         {
 
         }

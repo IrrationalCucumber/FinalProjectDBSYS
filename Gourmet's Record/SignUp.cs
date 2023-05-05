@@ -13,6 +13,9 @@ namespace Gourmet_s_Record
 {
     public partial class SignUp : Form
     {
+        SqlCommand cmd;
+        SqlDataReader dr;
+
         public SignUp()
         {
             InitializeComponent();
@@ -67,16 +70,125 @@ namespace Gourmet_s_Record
         private void btSignIn_Click(object sender, EventArgs e)
         {
             try {
+                /*
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Insert into Accounts(username, password , LastName,FirstName, email ,accountType) Values ('" + tbUsername.Text + "','" + tbPassword.Text+ "','" + tbLastname.Text + "','" + tbFirstname.Text + "','" + tbEmail.Text + "','" + tbAccT.Text + "')", con);
+                SqlCommand cmd = new SqlCommand("Insert into Accounts(username, password, accountType, accountVerified) Values ('" + tbUsername.Text + "','" + tbPassword.Text+ "','" + tbLastname.Text + "','" + tbFirstname.Text + "','" + tbEmail.Text + "','" + tbAccT.Text + "')", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Success!!!");
+                */
+
+                if (tbPassword.Text != string.Empty || tbUsername.Text != string.Empty)
+                {
+                    if(tbPassword.Text != tbPassword1.Text)
+                    {
+                        if (IsStrongPassword(tbPassword.Text))
+                        {
+                            cmd = new SqlCommand("select * from ACCOUNTS where username='" + tbUsername.Text + "'", con);
+                            SqlDataReader dr = cmd.ExecuteReader();
+                            if (dr.Read())
+                            {
+                                dr.Close();
+                                lbMessage.Text = "Username Already exist please try another";
+                            }
+                            else
+                            {
+                                dr.Close();
+                                string UserName = tbUsername.Text;
+                                string Password = Encryption.Encrypt(tbPassword.Text.ToString());
+                                string type = tbAccT.Text;
+                                con.Close();
+                                con.Open();
+                                cmd = new SqlCommand("insert into ACCOUNTS values(@username,@password, accountType)", con);
+                                cmd.Parameters.AddWithValue("username", UserName);
+                                cmd.Parameters.AddWithValue("password", Password);
+                                cmd.Parameters.AddWithValue("accountType", type);
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                                MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                SignIn si = new SignIn();
+                                si.Show();
+                                this.Hide();
+                            }
+                        }
+                        else if (tbAccT.Text == "admin"){
+                            dr.Close();
+                            string UserName = tbUsername.Text;
+                            string Password = Encryption.Encrypt(tbPassword.Text.ToString());
+                            string type = tbAccT.Text;
+                            con.Close();
+                            con.Open();
+                            cmd = new SqlCommand("insert into ACCOUNTS values(@username,@password, accountType, account)", con);
+                            cmd.Parameters.AddWithValue("username", UserName);
+                            cmd.Parameters.AddWithValue("password", Password);
+                            cmd.Parameters.AddWithValue("accountType", type);
+
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                            MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            SignIn si = new SignIn();
+                            si.Show();
+                            this.Hide();
+                        }
+                        else {
+                            lbMessage.Text = "Password id too weak.\n Combine numbers, special characters and, upper and lower case letters";
+                        }
+                    }
+                    else
+                    {
+                        lbMessage.Text = "Please enter both password same ";
+                    }
+                }
+                else
+                {
+                    lbMessage.Text = "Please enter value in all field.";
+                }
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lbMessage.Text = ex.Message;
             }
            
+
+        }
+        public static bool IsStrongPassword(string password)
+        {
+            bool hasUpperCase = false;
+            bool hasLowerCase = false;
+            bool hasDigit = false;
+            bool hasSpecialChar = false;
+
+            foreach (char c in password)
+            {
+                if (Char.IsUpper(c))
+                {
+                    hasUpperCase = true;
+                }
+                else if (Char.IsLower(c))
+                {
+                    hasLowerCase = true;
+                }
+                else if (Char.IsDigit(c))
+                {
+                    hasDigit = true;
+                }
+                else if (Char.IsSymbol(c) || Char.IsPunctuation(c))
+                {
+                    hasSpecialChar = true;
+                }
+            }
+
+            return hasUpperCase && hasLowerCase && hasDigit && hasSpecialChar;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            SignIn si = new SignIn();
+            si.Show();
+        }
+
+        private void lbMessage_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
