@@ -52,7 +52,7 @@ namespace Gourmet_s_Record
             this.filesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1011, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1238, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,7 +67,7 @@ namespace Gourmet_s_Record
             // artworkToolStripMenuItem
             // 
             this.artworkToolStripMenuItem.Name = "artworkToolStripMenuItem";
-            this.artworkToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.artworkToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
             this.artworkToolStripMenuItem.Text = "Artworks";
             // 
             // dataGridView1
@@ -141,7 +141,7 @@ namespace Gourmet_s_Record
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
             this.button4.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(828, 52);
+            this.button4.Location = new System.Drawing.Point(1035, 24);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 35);
@@ -153,7 +153,9 @@ namespace Gourmet_s_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 576);
+            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1238, 720);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);

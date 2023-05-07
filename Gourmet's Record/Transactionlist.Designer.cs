@@ -36,20 +36,22 @@ namespace Gourmet_s_Record
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(40, 28);
+            this.button1.Location = new System.Drawing.Point(60, 43);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 31);
+            this.button1.Size = new System.Drawing.Size(116, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "HOME";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // Transactionlist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._31a73e77032b7dc16248b49793556caa;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1238, 720);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Transactionlist";
             this.Text = "Transactionlist";
             this.ResumeLayout(false);

@@ -53,12 +53,12 @@ namespace Gourmet_s_Record
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tbBTFirstName = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -161,7 +161,7 @@ namespace Gourmet_s_Record
             this.btnConfirm.BackColor = System.Drawing.Color.RosyBrown;
             this.btnConfirm.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(830, 595);
+            this.btnConfirm.Location = new System.Drawing.Point(950, 648);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(191, 36);
@@ -173,7 +173,7 @@ namespace Gourmet_s_Record
             // 
             this.btnCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btnCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(581, 595);
+            this.btnCancel.Location = new System.Drawing.Point(701, 648);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(191, 36);
@@ -185,7 +185,7 @@ namespace Gourmet_s_Record
             // 
             this.btnHome.BackColor = System.Drawing.Color.RosyBrown;
             this.btnHome.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(846, 14);
+            this.btnHome.Location = new System.Drawing.Point(991, 14);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(191, 36);
@@ -243,7 +243,7 @@ namespace Gourmet_s_Record
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.Location = new System.Drawing.Point(63, 72);
+            this.pictureBox2.Location = new System.Drawing.Point(118, 101);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(336, 372);
             this.pictureBox2.TabIndex = 17;
@@ -340,11 +340,38 @@ namespace Gourmet_s_Record
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(63, 465);
+            this.groupBox1.Location = new System.Drawing.Point(118, 494);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(336, 146);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(151, 114);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 20);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "/";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(151, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(13, 20);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "/";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(151, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "/";
             // 
             // tbBTFirstName
             // 
@@ -364,7 +391,7 @@ namespace Gourmet_s_Record
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(471, 399);
+            this.groupBox2.Location = new System.Drawing.Point(565, 436);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(576, 188);
             this.groupBox2.TabIndex = 28;
@@ -384,39 +411,12 @@ namespace Gourmet_s_Record
             this.groupBox3.Controls.Add(this.tbBTLastname);
             this.groupBox3.Controls.Add(this.tbBTemail);
             this.groupBox3.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(471, 64);
+            this.groupBox3.Location = new System.Drawing.Point(565, 101);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(576, 312);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buyer Transaction";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "/";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(151, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 20);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "/";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(151, 114);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 20);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "/";
             // 
             // BuyerTransaction
             // 
@@ -424,7 +424,7 @@ namespace Gourmet_s_Record
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._31a73e77032b7dc16248b49793556caa1;
-            this.ClientSize = new System.Drawing.Size(1087, 662);
+            this.ClientSize = new System.Drawing.Size(1238, 720);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
