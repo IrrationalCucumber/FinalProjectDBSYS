@@ -66,9 +66,10 @@ namespace Gourmet_s_Record
 
         private void btSignIn_Click(object sender, EventArgs e)
         {
+            /*
             try {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Insert into Accounts(username, password , LastName,FirstName, email ,accountType) Values ('" + tbUsername.Text + "','" + tbPassword.Text+ "','" + tbLastname.Text + "','" + tbFirstname.Text + "','" + tbEmail.Text + "','" + tbAccT.Text + "')", con);
+                //SqlCommand cmd = new SqlCommand("Insert into Accounts(username, password , LastName,FirstName, email ,accountType) Values ('" + tbUsername.Text + "','" + tbPassword.Text+ "','" + tbLastname.Text + "','" + tbFirstname.Text + "','" + tbEmail.Text + "','" + .Text + "')", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Success!!!");
             }
@@ -76,7 +77,7 @@ namespace Gourmet_s_Record
             {
                 MessageBox.Show(ex.Message);
             }
-           
+           */
 
         }
 
