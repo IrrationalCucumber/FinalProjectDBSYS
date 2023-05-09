@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class SignUp : Form
+    public partial class Sign_Up : Form
     {
-        public SignUp()
+        public Sign_Up()
         {
             InitializeComponent();
         }

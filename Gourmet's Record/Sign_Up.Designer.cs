@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class SignUp
+    partial class Sign_Up
     {
         /// <summary>
         /// Required designer variable.
