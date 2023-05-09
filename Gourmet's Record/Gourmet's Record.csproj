@@ -119,6 +119,12 @@
     <Compile Include="artistTransactionList.Designer.cs">
       <DependentUpon>artistTransactionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="artistUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="artistUpload.Designer.cs">
+      <DependentUpon>artistUpload.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuyerAccountProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

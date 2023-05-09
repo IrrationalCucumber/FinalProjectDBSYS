@@ -129,6 +129,7 @@ namespace Gourmet_s_Record
             this.btSearch.TabIndex = 21;
             this.btSearch.Text = "Search";
             this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // tbSearch
             // 
@@ -151,9 +152,9 @@ namespace Gourmet_s_Record
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(49, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(75, 16);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Account List";
+            this.label1.Text = "Artwork LIst";
             // 
             // textBox1
             // 
@@ -200,6 +201,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.label1);
             this.Name = "adminArtowrkList";
             this.Text = "adminArtowrkList";
+            this.Load += new System.EventHandler(this.adminArtowrkList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

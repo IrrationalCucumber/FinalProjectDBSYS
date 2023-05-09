@@ -79,6 +79,7 @@ namespace Gourmet_s_Record
             this.tbSearch.TabIndex = 4;
             this.tbSearch.Text = "Search";
             this.tbSearch.UseVisualStyleBackColor = true;
+            this.tbSearch.Click += new System.EventHandler(this.tbSearch_Click);
             // 
             // cbVerified
             // 
@@ -165,10 +166,12 @@ namespace Gourmet_s_Record
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(427, 62);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(107, 20);
             this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // adminAccountList
             // 
@@ -191,6 +194,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.label1);
             this.Name = "adminAccountList";
             this.Text = "UserList";
+            this.Load += new System.EventHandler(this.adminAccountList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

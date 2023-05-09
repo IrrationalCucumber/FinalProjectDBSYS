@@ -13,7 +13,7 @@ namespace Gourmet_s_Record
 {
     public partial class adminHome : Form
     {
-        SqlConnection cn;
+        
         public adminHome()
         {
             InitializeComponent();
@@ -262,6 +262,13 @@ namespace Gourmet_s_Record
 
                 //dataGridView1.DataSource = dtbl;
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
+            artistUpload up = new artistUpload();
+            up.Show();
         }
     }
 }
