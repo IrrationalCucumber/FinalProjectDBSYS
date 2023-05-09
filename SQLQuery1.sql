@@ -5,13 +5,16 @@ use RECORDS
 create table ACCOUNTS
 (
 	userID int IDENTITY (1, 1),
-	username varchar(20) NOT NULL,
-	password varchar(20),
+	username varchar(20),
 	LastName varchar(30),
 	FirstName varchar(30),
 	email varchar(50),
-	accountType varchar(10),
 	contactNum int,
+	addressProvince varchar(30),
+	addressCity varchar(30),
+	addressBarangay varchar(30),
+	addressStreet varchar(50),
+	addressHome varchar(20),
 	PRIMARY KEY (username)
 )
 
