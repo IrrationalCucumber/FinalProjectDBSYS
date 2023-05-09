@@ -101,6 +101,12 @@
     <Compile Include="AccountPage.Designer.cs">
       <DependentUpon>AccountPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Artwork_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artwork_List.Designer.cs">
+      <DependentUpon>Artwork_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Artist_Upload_Artwork.resx">
       <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Artwork_List.resx">
+      <DependentUpon>Artwork_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyerAccountProfile.resx">
       <DependentUpon>BuyerAccountProfile.cs</DependentUpon>

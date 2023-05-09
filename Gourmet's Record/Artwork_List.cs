@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class UserList : Form
+    public partial class Account_List : Form
     {
-        public UserList()
+        public Account_List()
         {
             InitializeComponent();
-        }
-
-        private void UserList_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

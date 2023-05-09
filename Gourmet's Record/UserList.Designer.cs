@@ -29,72 +29,35 @@ namespace Gourmet_s_Record
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.artworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.tbType = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbVerified = new System.Windows.Forms.CheckBox();
+            this.tbSearch = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.RosyBrown;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1238, 36);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // filesToolStripMenuItem
-            // 
-            this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.artworkToolStripMenuItem});
-            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.filesToolStripMenuItem.Text = "Files";
-            // 
-            // artworkToolStripMenuItem
-            // 
-            this.artworkToolStripMenuItem.Name = "artworkToolStripMenuItem";
-            this.artworkToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
-            this.artworkToolStripMenuItem.Text = "Artworks";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 210);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 175);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(892, 345);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 525);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(56, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(262, 35);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Sort by Date";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(56, 61);
+            this.dateTimePicker1.Location = new System.Drawing.Point(599, 71);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(262, 26);
             this.dateTimePicker1.TabIndex = 11;
@@ -103,8 +66,8 @@ namespace Gourmet_s_Record
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.RosyBrown;
             this.btnRefresh.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRefresh.Location = new System.Drawing.Point(828, 167);
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRefresh.Location = new System.Drawing.Point(741, 112);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(120, 35);
@@ -112,63 +75,135 @@ namespace Gourmet_s_Record
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(342, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 35);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Sort by Artist Account";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnHome.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHome.Location = new System.Drawing.Point(993, 14);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(191, 36);
+            this.btnHome.TabIndex = 15;
+            this.btnHome.Text = "home";
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // radioButton1
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(637, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(262, 35);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Sort by Buyer Account";
-            this.button3.UseVisualStyleBackColor = false;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(1021, 351);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(88, 24);
+            this.radioButton1.TabIndex = 22;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Verified";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // tbType
             // 
-            this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(1035, 24);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 35);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "home";
-            this.button4.UseVisualStyleBackColor = false;
+            this.tbType.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbType.Location = new System.Drawing.Point(1021, 306);
+            this.tbType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbType.Name = "tbType";
+            this.tbType.ReadOnly = true;
+            this.tbType.Size = new System.Drawing.Size(195, 26);
+            this.tbType.TabIndex = 21;
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbUsername.Location = new System.Drawing.Point(1021, 266);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.ReadOnly = true;
+            this.tbUsername.Size = new System.Drawing.Size(195, 26);
+            this.tbUsername.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(886, 353);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Verification";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(886, 309);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 20);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Account Type";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(886, 269);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Username";
+            // 
+            // cbVerified
+            // 
+            this.cbVerified.AutoSize = true;
+            this.cbVerified.Location = new System.Drawing.Point(523, 118);
+            this.cbVerified.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbVerified.Name = "cbVerified";
+            this.cbVerified.Size = new System.Drawing.Size(89, 24);
+            this.cbVerified.TabIndex = 25;
+            this.cbVerified.Text = "Verified";
+            this.cbVerified.UseVisualStyleBackColor = true;
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.BackColor = System.Drawing.Color.RosyBrown;
+            this.tbSearch.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.tbSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbSearch.Location = new System.Drawing.Point(31, 111);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(112, 35);
+            this.tbSearch.TabIndex = 24;
+            this.tbSearch.Text = "Search";
+            this.tbSearch.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(29, 71);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(562, 26);
+            this.textBox1.TabIndex = 23;
             // 
             // UserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1238, 720);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cbVerified);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.tbType);
+            this.Controls.Add(this.tbUsername);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserList";
             this.Text = "UserList";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.UserList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,16 +211,18 @@ namespace Gourmet_s_Record
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem artworkToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox tbType;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cbVerified;
+        private System.Windows.Forms.Button tbSearch;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

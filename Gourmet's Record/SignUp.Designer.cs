@@ -101,6 +101,7 @@ namespace Gourmet_s_Record
             // 
             this.btCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btCancel.Location = new System.Drawing.Point(207, 606);
             this.btCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btCancel.Name = "btCancel";
@@ -114,6 +115,7 @@ namespace Gourmet_s_Record
             // 
             this.btSignIn.BackColor = System.Drawing.Color.RosyBrown;
             this.btSignIn.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btSignIn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btSignIn.Location = new System.Drawing.Point(207, 561);
             this.btSignIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btSignIn.Name = "btSignIn";

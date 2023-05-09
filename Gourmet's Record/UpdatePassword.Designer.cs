@@ -47,7 +47,7 @@
             this.btCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btCancel.Location = new System.Drawing.Point(236, 563);
             this.btCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btCancel.Name = "btCancel";
@@ -61,7 +61,7 @@
             this.btSubmit.BackColor = System.Drawing.Color.RosyBrown;
             this.btSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSubmit.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btSubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btSubmit.Location = new System.Drawing.Point(236, 508);
             this.btSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btSubmit.Name = "btSubmit";

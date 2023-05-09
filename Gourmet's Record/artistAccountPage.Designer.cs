@@ -57,6 +57,8 @@ namespace Gourmet_s_Record
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -360,6 +362,24 @@ namespace Gourmet_s_Record
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(67, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 36);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "Order";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(303, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 36);
+            this.button2.TabIndex = 104;
+            this.button2.Text = "Gallery";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -368,6 +388,8 @@ namespace Gourmet_s_Record
             this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1238, 720);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -435,5 +457,7 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

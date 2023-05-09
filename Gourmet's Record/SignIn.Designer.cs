@@ -77,7 +77,8 @@ namespace Gourmet_s_Record
             // 
             this.btSignIn.BackColor = System.Drawing.Color.RosyBrown;
             this.btSignIn.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btSignIn.Location = new System.Drawing.Point(219, 408);
+            this.btSignIn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btSignIn.Location = new System.Drawing.Point(214, 447);
             this.btSignIn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btSignIn.Name = "btSignIn";
             this.btSignIn.Size = new System.Drawing.Size(262, 35);
@@ -90,7 +91,8 @@ namespace Gourmet_s_Record
             // 
             this.btCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btCancel.Location = new System.Drawing.Point(219, 465);
+            this.btCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btCancel.Location = new System.Drawing.Point(214, 492);
             this.btCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(262, 35);
@@ -128,7 +130,7 @@ namespace Gourmet_s_Record
             this.lbMessage.AutoSize = true;
             this.lbMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMessage.ForeColor = System.Drawing.Color.Red;
-            this.lbMessage.Location = new System.Drawing.Point(302, 522);
+            this.lbMessage.Location = new System.Drawing.Point(296, 394);
             this.lbMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMessage.Name = "lbMessage";
             this.lbMessage.Size = new System.Drawing.Size(120, 20);
@@ -140,7 +142,7 @@ namespace Gourmet_s_Record
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(410, 564);
+            this.linkLabel1.Location = new System.Drawing.Point(401, 564);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(66, 20);
             this.linkLabel1.TabIndex = 15;
