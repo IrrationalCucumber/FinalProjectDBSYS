@@ -71,5 +71,10 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

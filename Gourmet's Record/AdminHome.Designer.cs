@@ -47,10 +47,10 @@ namespace Gourmet_s_Record
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.btnHome = new System.Windows.Forms.Button();
             this.msName = new System.Windows.Forms.ToolStripMenuItem();
             this.accountListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -273,12 +273,22 @@ namespace Gourmet_s_Record
             this.menu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msName});
-            this.menu.Location = new System.Drawing.Point(1075, 40);
+            this.menu.Location = new System.Drawing.Point(1078, 40);
             this.menu.Name = "menu";
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menu.Size = new System.Drawing.Size(153, 42);
+            this.menu.Size = new System.Drawing.Size(150, 40);
             this.menu.TabIndex = 4;
             this.menu.Text = "menuStrip1";
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.kindpng_822748;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.Location = new System.Drawing.Point(21, 40);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(82, 70);
+            this.btnHome.TabIndex = 7;
+            this.btnHome.UseVisualStyleBackColor = true;
             // 
             // msName
             // 
@@ -294,31 +304,21 @@ namespace Gourmet_s_Record
             // accountListToolStripMenuItem
             // 
             this.accountListToolStripMenuItem.Name = "accountListToolStripMenuItem";
-            this.accountListToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.accountListToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.accountListToolStripMenuItem.Text = "Account List";
             // 
             // mToolStripMenuItem
             // 
             this.mToolStripMenuItem.Name = "mToolStripMenuItem";
-            this.mToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.mToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.mToolStripMenuItem.Text = "Artwork List";
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Gourmet_s_Record.Properties.Resources.OIP1;
-            this.button1.Location = new System.Drawing.Point(21, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 74);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1283, 692);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu);
@@ -362,6 +362,6 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.ToolStripMenuItem msName;
         private System.Windows.Forms.ToolStripMenuItem accountListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
     }
 }

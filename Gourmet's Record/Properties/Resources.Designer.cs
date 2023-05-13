@@ -93,6 +93,16 @@ namespace Gourmet_s_Record.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _570_5706067_update_reload_refresh_refresh_png_icon_transparent_png {
+            get {
+                object obj = ResourceManager.GetObject("570-5706067_update-reload-refresh-refresh-png-icon-transparent-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5e4e51034d59113f1b223c9cdc3f3743 {
             get {
                 object obj = ResourceManager.GetObject("5e4e51034d59113f1b223c9cdc3f3743", resourceCulture);
@@ -116,6 +126,16 @@ namespace Gourmet_s_Record.Properties {
         internal static System.Drawing.Bitmap download3 {
             get {
                 object obj = ResourceManager.GetObject("download3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kindpng_822748 {
+            get {
+                object obj = ResourceManager.GetObject("kindpng_822748", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

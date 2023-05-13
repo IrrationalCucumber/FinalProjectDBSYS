@@ -21,5 +21,45 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+//verify
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVerified_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

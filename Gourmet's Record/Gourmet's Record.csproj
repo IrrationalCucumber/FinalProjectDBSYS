@@ -125,12 +125,6 @@
     <Compile Include="Bookmark.Designer.cs">
       <DependentUpon>Bookmark.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyerAccountProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuyerAccountProfile.Designer.cs">
-      <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="BuyerTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,11 +132,11 @@
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
-    <Compile Include="artistAccountPage.cs">
+    <Compile Include="User_Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="artistAccountPage.Designer.cs">
-      <DependentUpon>artistAccountPage.cs</DependentUpon>
+    <Compile Include="User_Profile.Designer.cs">
+      <DependentUpon>User_Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Artwork.cs">
       <SubType>Form</SubType>
@@ -197,17 +191,14 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="artistAccountPage.resx">
-      <DependentUpon>artistAccountPage.cs</DependentUpon>
+    <EmbeddedResource Include="User_Profile.resx">
+      <DependentUpon>User_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Artist_Upload_Artwork.resx">
       <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Artwork_List.resx">
       <DependentUpon>Admin_Artwork_List.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuyerAccountProfile.resx">
-      <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyerTransaction.resx">
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
@@ -295,6 +286,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kindpng_822748.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\570-5706067_update-reload-refresh-refresh-png-icon-transparent-png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
