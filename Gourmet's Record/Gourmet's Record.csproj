@@ -138,11 +138,11 @@
     <Compile Include="User_Profile.Designer.cs">
       <DependentUpon>User_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Artwork.cs">
+    <Compile Include="Artwork_display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Artwork.Designer.cs">
-      <DependentUpon>Artwork.cs</DependentUpon>
+    <Compile Include="Artwork_display.Designer.cs">
+      <DependentUpon>Artwork_display.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -203,8 +203,8 @@
     <EmbeddedResource Include="BuyerTransaction.resx">
       <DependentUpon>BuyerTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Artwork.resx">
-      <DependentUpon>Artwork.cs</DependentUpon>
+    <EmbeddedResource Include="Artwork_display.resx">
+      <DependentUpon>Artwork_display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

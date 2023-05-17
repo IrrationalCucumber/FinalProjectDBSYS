@@ -46,7 +46,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(549, 115);
+            this.label1.Location = new System.Drawing.Point(622, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 1;
@@ -66,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(550, 177);
+            this.label2.Location = new System.Drawing.Point(623, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 2;
@@ -77,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(549, 247);
+            this.label3.Location = new System.Drawing.Point(622, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 3;
@@ -88,7 +92,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(550, 377);
+            this.label4.Location = new System.Drawing.Point(623, 379);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 20);
             this.label4.TabIndex = 4;
@@ -97,7 +101,7 @@
             // 
             // tbArtTitle
             // 
-            this.tbArtTitle.Location = new System.Drawing.Point(724, 109);
+            this.tbArtTitle.Location = new System.Drawing.Point(783, 111);
             this.tbArtTitle.Name = "tbArtTitle";
             this.tbArtTitle.Size = new System.Drawing.Size(423, 26);
             this.tbArtTitle.TabIndex = 5;
@@ -105,7 +109,7 @@
             // 
             // tbWidth
             // 
-            this.tbWidth.Location = new System.Drawing.Point(797, 171);
+            this.tbWidth.Location = new System.Drawing.Point(855, 173);
             this.tbWidth.Name = "tbWidth";
             this.tbWidth.Size = new System.Drawing.Size(127, 26);
             this.tbWidth.TabIndex = 6;
@@ -113,7 +117,7 @@
             // 
             // tbDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(723, 374);
+            this.tbDescription.Location = new System.Drawing.Point(782, 376);
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.Size = new System.Drawing.Size(424, 214);
@@ -125,7 +129,7 @@
             this.emImage.AutoSize = true;
             this.emImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
             this.emImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.emImage.Location = new System.Drawing.Point(70, 645);
+            this.emImage.Location = new System.Drawing.Point(101, 644);
             this.emImage.Name = "emImage";
             this.emImage.Size = new System.Drawing.Size(113, 20);
             this.emImage.TabIndex = 9;
@@ -137,7 +141,7 @@
             this.btnSave.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSave.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(731, 604);
+            this.btnSave.Location = new System.Drawing.Point(790, 617);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(191, 36);
             this.btnSave.TabIndex = 10;
@@ -150,7 +154,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btnCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(956, 604);
+            this.btnCancel.Location = new System.Drawing.Point(1015, 617);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(191, 36);
             this.btnCancel.TabIndex = 11;
@@ -160,7 +164,7 @@
             // 
             // tbLength
             // 
-            this.tbLength.Location = new System.Drawing.Point(1021, 171);
+            this.tbLength.Location = new System.Drawing.Point(1079, 173);
             this.tbLength.Name = "tbLength";
             this.tbLength.Size = new System.Drawing.Size(127, 26);
             this.tbLength.TabIndex = 12;
@@ -169,7 +173,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(727, 177);
+            this.label6.Location = new System.Drawing.Point(785, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 20);
             this.label6.TabIndex = 13;
@@ -178,7 +182,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(956, 174);
+            this.label7.Location = new System.Drawing.Point(1014, 176);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 20);
             this.label7.TabIndex = 14;
@@ -188,12 +192,13 @@
             // 
             this.CBArtType.FormattingEnabled = true;
             this.CBArtType.Items.AddRange(new object[] {
-            "Painting",
+            "Acrylic Painting",
+            "Oil Painting",
+            "Watercolor Painting",
+            "Spray Painting",
             "Sculpture",
-            "Digital Art",
-            "Architecture",
-            "Photography"});
-            this.CBArtType.Location = new System.Drawing.Point(724, 244);
+            "Digital Art"});
+            this.CBArtType.Location = new System.Drawing.Point(783, 246);
             this.CBArtType.Name = "CBArtType";
             this.CBArtType.Size = new System.Drawing.Size(423, 28);
             this.CBArtType.TabIndex = 15;
@@ -202,7 +207,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(74, 109);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 113);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(414, 509);
             this.pictureBox1.TabIndex = 0;
@@ -214,7 +219,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(550, 312);
+            this.label5.Location = new System.Drawing.Point(623, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 17;
@@ -222,7 +227,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(725, 309);
+            this.textBox1.Location = new System.Drawing.Point(784, 311);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(423, 26);
             this.textBox1.TabIndex = 18;
@@ -237,6 +242,26 @@
             this.button1.TabIndex = 27;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(33, 113);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 509);
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(537, 113);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 509);
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
+            // 
             // Artist_Upload_Artwork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -244,6 +269,8 @@
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1238, 720);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -265,6 +292,8 @@
             this.Name = "Artist_Upload_Artwork";
             this.Text = "Artwork Information";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +319,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

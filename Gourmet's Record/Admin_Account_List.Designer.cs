@@ -57,7 +57,7 @@ namespace Gourmet_s_Record
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(682, 46);
+            this.dateTimePicker1.Location = new System.Drawing.Point(605, 46);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(262, 26);
             this.dateTimePicker1.TabIndex = 11;
@@ -65,7 +65,7 @@ namespace Gourmet_s_Record
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(1021, 351);
+            this.radioButton1.Location = new System.Drawing.Point(1021, 393);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(88, 24);
@@ -78,7 +78,7 @@ namespace Gourmet_s_Record
             // tbType
             // 
             this.tbType.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbType.Location = new System.Drawing.Point(1021, 306);
+            this.tbType.Location = new System.Drawing.Point(1021, 348);
             this.tbType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbType.Name = "tbType";
             this.tbType.ReadOnly = true;
@@ -89,7 +89,7 @@ namespace Gourmet_s_Record
             // tbUsername
             // 
             this.tbUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tbUsername.Location = new System.Drawing.Point(1021, 266);
+            this.tbUsername.Location = new System.Drawing.Point(1021, 308);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.ReadOnly = true;
@@ -100,7 +100,7 @@ namespace Gourmet_s_Record
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(886, 353);
+            this.label4.Location = new System.Drawing.Point(886, 395);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 20);
@@ -110,7 +110,7 @@ namespace Gourmet_s_Record
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(886, 309);
+            this.label3.Location = new System.Drawing.Point(886, 351);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 20);
@@ -120,7 +120,7 @@ namespace Gourmet_s_Record
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(886, 269);
+            this.label2.Location = new System.Drawing.Point(886, 311);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
@@ -130,7 +130,7 @@ namespace Gourmet_s_Record
             // cbVerified
             // 
             this.cbVerified.AutoSize = true;
-            this.cbVerified.Location = new System.Drawing.Point(682, 92);
+            this.cbVerified.Location = new System.Drawing.Point(605, 86);
             this.cbVerified.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVerified.Name = "cbVerified";
             this.cbVerified.Size = new System.Drawing.Size(89, 24);
@@ -158,7 +158,7 @@ namespace Gourmet_s_Record
             this.textBox1.Location = new System.Drawing.Point(112, 46);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(562, 26);
+            this.textBox1.Size = new System.Drawing.Size(486, 26);
             this.textBox1.TabIndex = 23;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
