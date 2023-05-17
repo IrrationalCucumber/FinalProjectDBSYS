@@ -10,12 +10,6 @@ create table ACCOUNTS
 	accountType varchar(10),
 	accountVerified varchar(10) default 'unverified',
 	dateAdded date,
-	PRIMARY KEY (username)
-)
-create table USERDETAILS
-(
-	userID int IDENTITY (1,1),
-	username varchar(20),
 	LastName varchar(30),
 	FirstName varchar(30),
 	email varchar(50),
@@ -25,7 +19,7 @@ create table USERDETAILS
 	addressBarangay varchar(30),
 	addressStreet varchar(50),
 	addressHome varchar(20),
-	
+	PRIMARY KEY (username)
 )
 
 create table ARTWORKS
