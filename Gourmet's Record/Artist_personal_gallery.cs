@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class Bookmark : Form
+    public partial class Artist_personal_gallery : Form
     {
-        public Bookmark()
+        public Artist_personal_gallery()
         {
             InitializeComponent();
         }

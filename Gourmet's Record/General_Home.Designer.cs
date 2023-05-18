@@ -31,6 +31,8 @@ namespace Gourmet_s_Record
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.chStyle4 = new System.Windows.Forms.CheckBox();
             this.chStyle3 = new System.Windows.Forms.CheckBox();
             this.chStyle2 = new System.Windows.Forms.CheckBox();
@@ -43,11 +45,9 @@ namespace Gourmet_s_Record
             this.cbPriceRange2 = new System.Windows.Forms.CheckBox();
             this.cbPriceRange1 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.cbFilter = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -92,6 +92,28 @@ namespace Gourmet_s_Record
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Style";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(36, 165);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(103, 24);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "Sculpture";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(36, 63);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(141, 24);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Acrylic Painting";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // chStyle4
             // 
@@ -235,6 +257,19 @@ namespace Gourmet_s_Record
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.RosyBrown;
+            this.button3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(813, 26);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 35);
+            this.button3.TabIndex = 53;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // tbSearch
             // 
             this.tbSearch.Location = new System.Drawing.Point(202, 30);
@@ -256,41 +291,6 @@ namespace Gourmet_s_Record
             this.cbFilter.Size = new System.Drawing.Size(180, 27);
             this.cbFilter.TabIndex = 1;
             this.cbFilter.Text = "Search by...";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(36, 63);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Acrylic Painting";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(36, 165);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 24);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "Sculpture";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(813, 26);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 53;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -334,7 +334,7 @@ namespace Gourmet_s_Record
             this.dataGridView1.Size = new System.Drawing.Size(924, 544);
             this.dataGridView1.TabIndex = 10;
             // 
-            // AdminHome
+            // General_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -347,8 +347,8 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminHome";
-            this.Text = "AdminHome";
+            this.Name = "General_Home";
+            this.Text = "Home";
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

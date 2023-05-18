@@ -95,17 +95,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccountPage.Designer.cs">
-      <DependentUpon>AccountPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Artwork_List.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_Artwork_List.Designer.cs">
       <DependentUpon>Admin_Artwork_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Artist_personal_gallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Artist_personal_gallery.Designer.cs">
+      <DependentUpon>Artist_personal_gallery.cs</DependentUpon>
     </Compile>
     <Compile Include="General_Home.cs">
       <SubType>Form</SubType>
@@ -118,12 +118,6 @@
     </Compile>
     <Compile Include="Artist_Upload_Artwork.Designer.cs">
       <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Bookmark.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bookmark.Designer.cs">
-      <DependentUpon>Bookmark.cs</DependentUpon>
     </Compile>
     <Compile Include="Buyer_Transaction.cs">
       <SubType>Form</SubType>
@@ -182,6 +176,9 @@
     <Compile Include="Admin_Account_List.Designer.cs">
       <DependentUpon>Admin_Account_List.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Artist_personal_gallery.resx">
+      <DependentUpon>Artist_personal_gallery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="General_Home.resx">
       <DependentUpon>General_Home.cs</DependentUpon>
     </EmbeddedResource>
