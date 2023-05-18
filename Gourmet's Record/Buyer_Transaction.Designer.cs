@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class BuyerTransaction
+    partial class Buyer_Transaction
     {
         /// <summary>
         /// Required designer variable.

@@ -107,11 +107,11 @@
     <Compile Include="Admin_Artwork_List.Designer.cs">
       <DependentUpon>Admin_Artwork_List.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminHome.cs">
+    <Compile Include="General_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminHome.Designer.cs">
-      <DependentUpon>AdminHome.cs</DependentUpon>
+    <Compile Include="General_Home.Designer.cs">
+      <DependentUpon>General_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Artist_Upload_Artwork.cs">
       <SubType>Form</SubType>
@@ -125,11 +125,11 @@
     <Compile Include="Bookmark.Designer.cs">
       <DependentUpon>Bookmark.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyerTransaction.cs">
+    <Compile Include="Buyer_Transaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuyerTransaction.Designer.cs">
-      <DependentUpon>BuyerTransaction.cs</DependentUpon>
+    <Compile Include="Buyer_Transaction.Designer.cs">
+      <DependentUpon>Buyer_Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
     <Compile Include="User_Profile.cs">
@@ -143,12 +143,6 @@
     </Compile>
     <Compile Include="Artwork_display.Designer.cs">
       <DependentUpon>Artwork_display.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
@@ -188,8 +182,8 @@
     <Compile Include="Admin_Account_List.Designer.cs">
       <DependentUpon>Admin_Account_List.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminHome.resx">
-      <DependentUpon>AdminHome.cs</DependentUpon>
+    <EmbeddedResource Include="General_Home.resx">
+      <DependentUpon>General_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Profile.resx">
       <DependentUpon>User_Profile.cs</DependentUpon>
@@ -200,14 +194,11 @@
     <EmbeddedResource Include="Admin_Artwork_List.resx">
       <DependentUpon>Admin_Artwork_List.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuyerTransaction.resx">
-      <DependentUpon>BuyerTransaction.cs</DependentUpon>
+    <EmbeddedResource Include="Buyer_Transaction.resx">
+      <DependentUpon>Buyer_Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Artwork_display.resx">
       <DependentUpon>Artwork_display.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
@@ -292,6 +283,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\570-5706067_update-reload-refresh-refresh-png-icon-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled18_20221019160221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\755bbb0ba94f6148c6293920d6bf04a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77e07300c4c6c41c0b79f20c037b408a.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

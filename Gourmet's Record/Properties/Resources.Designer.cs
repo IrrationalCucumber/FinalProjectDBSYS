@@ -113,6 +113,26 @@ namespace Gourmet_s_Record.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _755bbb0ba94f6148c6293920d6bf04a1 {
+            get {
+                object obj = ResourceManager.GetObject("755bbb0ba94f6148c6293920d6bf04a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _77e07300c4c6c41c0b79f20c037b408a {
+            get {
+                object obj = ResourceManager.GetObject("77e07300c4c6c41c0b79f20c037b408a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download2 {
             get {
                 object obj = ResourceManager.GetObject("download2", resourceCulture);
@@ -206,6 +226,16 @@ namespace Gourmet_s_Record.Properties {
         internal static System.Drawing.Bitmap tt {
             get {
                 object obj = ResourceManager.GetObject("tt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled18_20221019160221 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled18_20221019160221", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

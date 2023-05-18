@@ -16,5 +16,15 @@ namespace Gourmet_s_Record
         {
             InitializeComponent();
         }
+
+        private void chStyle1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
