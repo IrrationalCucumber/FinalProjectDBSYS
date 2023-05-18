@@ -38,13 +38,13 @@ namespace Gourmet_s_Record
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbAccT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbMessage = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.tbPassword1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cbType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -147,13 +147,6 @@ namespace Gourmet_s_Record
             this.label1.TabIndex = 16;
             this.label1.Text = "Sign up";
             // 
-            // tbAccT
-            // 
-            this.tbAccT.Location = new System.Drawing.Point(75, 249);
-            this.tbAccT.Name = "tbAccT";
-            this.tbAccT.Size = new System.Drawing.Size(292, 20);
-            this.tbAccT.TabIndex = 30;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -224,19 +217,30 @@ namespace Gourmet_s_Record
             this.label6.TabIndex = 38;
             this.label6.Text = "Confirm Password";
             // 
+            // cbType
+            // 
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Items.AddRange(new object[] {
+            "Artist",
+            "Buyer"});
+            this.cbType.Location = new System.Drawing.Point(75, 258);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(292, 21);
+            this.cbType.TabIndex = 39;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(490, 495);
+            this.Controls.Add(this.cbType);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbPassword1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tbAccT);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -266,12 +270,12 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbAccT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbMessage;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.TextBox tbPassword1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbType;
     }
 }

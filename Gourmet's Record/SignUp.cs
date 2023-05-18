@@ -95,13 +95,14 @@ namespace Gourmet_s_Record
                                 dr.Close();
                                 string UserName = tbUsername.Text;
                                 string Password = Encryption.Encrypt(tbPassword.Text.ToString());
-                                string type = tbAccT.Text;
+                                string type = cbType.SelectedItem.ToString();
                                 con.Close();
                                 con.Open();
-                                cmd = new SqlCommand("insert into ACCOUNTS values(@username,@password, accountType)", con);
+                                cmd = new SqlCommand("insert into ACCOUNTS values(@username,@password, @accountType, @dateAdded)", con);
                                 cmd.Parameters.AddWithValue("username", UserName);
                                 cmd.Parameters.AddWithValue("password", Password);
                                 cmd.Parameters.AddWithValue("accountType", type);
+                                cmd.Parameters.AddWithValue("dateAdded", DateTime.Now);
                                 cmd.ExecuteNonQuery();
                                 con.Close();
                                 MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,25 +110,6 @@ namespace Gourmet_s_Record
                                 si.Show();
                                 this.Hide();
                             }
-                        }
-                        else if (tbAccT.Text == "admin"){
-                            dr.Close();
-                            string UserName = tbUsername.Text;
-                            string Password = Encryption.Encrypt(tbPassword.Text.ToString());
-                            string type = tbAccT.Text;
-                            con.Close();
-                            con.Open();
-                            cmd = new SqlCommand("insert into ACCOUNTS values(@username,@password, accountType, account)", con);
-                            cmd.Parameters.AddWithValue("username", UserName);
-                            cmd.Parameters.AddWithValue("password", Password);
-                            cmd.Parameters.AddWithValue("accountType", type);
-
-                            cmd.ExecuteNonQuery();
-                            con.Close();
-                            MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            SignIn si = new SignIn();
-                            si.Show();
-                            this.Hide();
                         }
                         else {
                             lbMessage.Text = "Password id too weak.\n Combine numbers, special characters and, upper and lower case letters";

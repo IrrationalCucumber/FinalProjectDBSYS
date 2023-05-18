@@ -78,11 +78,8 @@ namespace Gourmet_s_Record
 
                 else if (dt.HasRows)
                 {
-                    SqlCommand command = new SqlCommand("SELECT accountType FROM Users WHERE username=@username", con);
-                    command.Parameters.AddWithValue("@username", tbUsername.Text);
-
-                    // Execute the command and retrieve the user type
-                    string type = (string)command.ExecuteScalar();
+                    string username = tbUsername.Text;
+                    string type = GetUserType(username);
 
                     if (type == "admin")
                     {
@@ -94,7 +91,7 @@ namespace Gourmet_s_Record
                         home.Show();
                     }
 
-                    else if(type == "artist")
+                    else if(type == "Artist")
                     {
                         MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         isArtist = true;
@@ -126,6 +123,26 @@ namespace Gourmet_s_Record
             
 
 
+        }
+
+        private string GetUserType(string username)
+        {
+            string userType = string.Empty;
+            string query = "SELECT accountType FROM ACCOUNTS WHERE username = @username";
+
+            using (con)
+            {
+                con.Open();
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    object result = command.ExecuteScalar();
+                    userType = result != null ? result.ToString() : string.Empty;
+                }
+            }
+
+            return userType;
         }
     }
 }
