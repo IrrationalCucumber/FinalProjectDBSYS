@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class UpdatePassword : Form
+    public partial class Update_Password : Form
     {
-        public UpdatePassword()
+        public Update_Password()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Gourmet_s_Record
 {
-    partial class UpdatePassword
+    partial class Update_Password
     {
         /// <summary>
         /// Required designer variable.

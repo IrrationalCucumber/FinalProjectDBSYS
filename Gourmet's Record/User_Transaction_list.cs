@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class Transactionlist : Form
+    public partial class User_Transaction_list : Form
     {
-        public Transactionlist()
+        public User_Transaction_list()
         {
             InitializeComponent();
         }
