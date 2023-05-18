@@ -31,13 +31,14 @@ namespace Gourmet_s_Record
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHome = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,35 +64,29 @@ namespace Gourmet_s_Record
             this.btnHome.Size = new System.Drawing.Size(53, 47);
             this.btnHome.TabIndex = 52;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(107, 86);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 57;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSearch.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Location = new System.Drawing.Point(107, 86);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(112, 35);
+            this.btnSearch.TabIndex = 57;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tbSearch
             // 
             this.tbSearch.Location = new System.Drawing.Point(105, 46);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(486, 26);
+            this.tbSearch.Size = new System.Drawing.Size(412, 26);
             this.tbSearch.TabIndex = 53;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(599, 46);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(262, 26);
-            this.dateTimePicker1.TabIndex = 55;
             // 
             // btnRefresh
             // 
@@ -106,6 +101,7 @@ namespace Gourmet_s_Record
             this.btnRefresh.Size = new System.Drawing.Size(53, 45);
             this.btnRefresh.TabIndex = 56;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // pictureBox1
             // 
@@ -138,18 +134,40 @@ namespace Gourmet_s_Record
             this.pictureBox3.TabIndex = 111;
             this.pictureBox3.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Approved",
+            "Pending"});
+            this.comboBox1.Location = new System.Drawing.Point(633, 46);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(228, 28);
+            this.comboBox1.TabIndex = 112;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(540, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 114;
+            this.label2.Text = "Status";
+            // 
             // User_Transaction_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1238, 720);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.dataGridView1);
@@ -168,12 +186,13 @@ namespace Gourmet_s_Record
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbSearch;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

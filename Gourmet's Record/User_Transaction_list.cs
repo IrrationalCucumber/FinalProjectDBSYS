@@ -16,5 +16,20 @@ namespace Gourmet_s_Record
         {
             InitializeComponent();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

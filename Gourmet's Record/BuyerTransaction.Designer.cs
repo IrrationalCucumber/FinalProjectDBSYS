@@ -279,7 +279,7 @@ namespace Gourmet_s_Record
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label3);
@@ -330,7 +330,7 @@ namespace Gourmet_s_Record
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.DarkSalmon;
+            this.groupBox2.BackColor = System.Drawing.Color.PeachPuff;
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Bold);
@@ -343,7 +343,7 @@ namespace Gourmet_s_Record
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.DarkSalmon;
+            this.groupBox3.BackColor = System.Drawing.Color.PeachPuff;
             this.groupBox3.Controls.Add(this.tbBTFirstName);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
@@ -360,7 +360,7 @@ namespace Gourmet_s_Record
             this.groupBox3.Size = new System.Drawing.Size(576, 328);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Buyer Transaction";
+            this.groupBox3.Text = "Information";
             // 
             // button1
             // 
