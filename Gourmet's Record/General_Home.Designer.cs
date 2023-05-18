@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class AdminHome
+    partial class General_Home
     {
         /// <summary>
         /// Required designer variable.

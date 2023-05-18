@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gourmet_s_Record
 {
-    public partial class AdminHome : Form
+    public partial class General_Home : Form
     {
-        public AdminHome()
+        public General_Home()
         {
             InitializeComponent();
         }
