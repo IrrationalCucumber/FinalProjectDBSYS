@@ -17,12 +17,8 @@ namespace Gourmet_s_Record
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void tbBTaddress_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -33,6 +29,40 @@ namespace Gourmet_s_Record
         }
 
         private void tbBTContact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBTFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBTLastname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBTemail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBTTotalAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+//label
+        private void lbArtist_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lbArtTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbPrice_Click(object sender, EventArgs e)
         {
 
         }

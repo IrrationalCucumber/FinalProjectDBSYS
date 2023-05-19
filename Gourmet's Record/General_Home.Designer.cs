@@ -31,11 +31,11 @@ namespace Gourmet_s_Record
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.chStyle4 = new System.Windows.Forms.CheckBox();
-            this.chStyle3 = new System.Windows.Forms.CheckBox();
-            this.chStyle2 = new System.Windows.Forms.CheckBox();
+            this.cbStyle5 = new System.Windows.Forms.CheckBox();
+            this.cbStyle2 = new System.Windows.Forms.CheckBox();
+            this.cbStyle3 = new System.Windows.Forms.CheckBox();
+            this.cbStyle4 = new System.Windows.Forms.CheckBox();
+            this.cbStyle6 = new System.Windows.Forms.CheckBox();
             this.chStyle1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbPriceRange6 = new System.Windows.Forms.CheckBox();
@@ -45,11 +45,11 @@ namespace Gourmet_s_Record
             this.cbPriceRange2 = new System.Windows.Forms.CheckBox();
             this.cbPriceRange1 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.cbFilter = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -78,11 +78,11 @@ namespace Gourmet_s_Record
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.PeachPuff;
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.chStyle4);
-            this.groupBox3.Controls.Add(this.chStyle3);
-            this.groupBox3.Controls.Add(this.chStyle2);
+            this.groupBox3.Controls.Add(this.cbStyle5);
+            this.groupBox3.Controls.Add(this.cbStyle2);
+            this.groupBox3.Controls.Add(this.cbStyle3);
+            this.groupBox3.Controls.Add(this.cbStyle4);
+            this.groupBox3.Controls.Add(this.cbStyle6);
             this.groupBox3.Controls.Add(this.chStyle1);
             this.groupBox3.Location = new System.Drawing.Point(8, 293);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -93,60 +93,65 @@ namespace Gourmet_s_Record
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Style";
             // 
-            // checkBox2
+            // cbStyle5
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(36, 165);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 24);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "Sculpture";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbStyle5.AutoSize = true;
+            this.cbStyle5.Location = new System.Drawing.Point(36, 165);
+            this.cbStyle5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbStyle5.Name = "cbStyle5";
+            this.cbStyle5.Size = new System.Drawing.Size(103, 24);
+            this.cbStyle5.TabIndex = 5;
+            this.cbStyle5.Text = "Sculpture";
+            this.cbStyle5.UseVisualStyleBackColor = true;
+            this.cbStyle5.CheckedChanged += new System.EventHandler(this.cbStyle5_CheckedChanged);
             // 
-            // checkBox1
+            // cbStyle2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(36, 63);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Acrylic Painting";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbStyle2.AutoSize = true;
+            this.cbStyle2.Location = new System.Drawing.Point(36, 63);
+            this.cbStyle2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbStyle2.Name = "cbStyle2";
+            this.cbStyle2.Size = new System.Drawing.Size(141, 24);
+            this.cbStyle2.TabIndex = 4;
+            this.cbStyle2.Text = "Acrylic Painting";
+            this.cbStyle2.UseVisualStyleBackColor = true;
+            this.cbStyle2.CheckedChanged += new System.EventHandler(this.cbStyle2_CheckedChanged);
             // 
-            // chStyle4
+            // cbStyle3
             // 
-            this.chStyle4.AutoSize = true;
-            this.chStyle4.Location = new System.Drawing.Point(36, 97);
-            this.chStyle4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chStyle4.Name = "chStyle4";
-            this.chStyle4.Size = new System.Drawing.Size(114, 24);
-            this.chStyle4.TabIndex = 3;
-            this.chStyle4.Text = "Oil Painting";
-            this.chStyle4.UseVisualStyleBackColor = true;
+            this.cbStyle3.AutoSize = true;
+            this.cbStyle3.Location = new System.Drawing.Point(36, 97);
+            this.cbStyle3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbStyle3.Name = "cbStyle3";
+            this.cbStyle3.Size = new System.Drawing.Size(114, 24);
+            this.cbStyle3.TabIndex = 3;
+            this.cbStyle3.Text = "Oil Painting";
+            this.cbStyle3.UseVisualStyleBackColor = true;
+            this.cbStyle3.CheckedChanged += new System.EventHandler(this.cbStyle3_CheckedChanged);
             // 
-            // chStyle3
+            // cbStyle4
             // 
-            this.chStyle3.AutoSize = true;
-            this.chStyle3.Location = new System.Drawing.Point(36, 131);
-            this.chStyle3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chStyle3.Name = "chStyle3";
-            this.chStyle3.Size = new System.Drawing.Size(137, 24);
-            this.chStyle3.TabIndex = 2;
-            this.chStyle3.Text = "Spray Painting";
-            this.chStyle3.UseVisualStyleBackColor = true;
+            this.cbStyle4.AutoSize = true;
+            this.cbStyle4.Location = new System.Drawing.Point(36, 131);
+            this.cbStyle4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbStyle4.Name = "cbStyle4";
+            this.cbStyle4.Size = new System.Drawing.Size(137, 24);
+            this.cbStyle4.TabIndex = 2;
+            this.cbStyle4.Text = "Spray Painting";
+            this.cbStyle4.UseVisualStyleBackColor = true;
+            this.cbStyle4.CheckedChanged += new System.EventHandler(this.cbStyle4_CheckedChanged);
             // 
-            // chStyle2
+            // cbStyle6
             // 
-            this.chStyle2.AutoSize = true;
-            this.chStyle2.Location = new System.Drawing.Point(36, 200);
-            this.chStyle2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chStyle2.Name = "chStyle2";
-            this.chStyle2.Size = new System.Drawing.Size(104, 24);
-            this.chStyle2.TabIndex = 1;
-            this.chStyle2.Text = "Digital Art";
-            this.chStyle2.UseVisualStyleBackColor = true;
+            this.cbStyle6.AutoSize = true;
+            this.cbStyle6.Location = new System.Drawing.Point(36, 200);
+            this.cbStyle6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbStyle6.Name = "cbStyle6";
+            this.cbStyle6.Size = new System.Drawing.Size(104, 24);
+            this.cbStyle6.TabIndex = 1;
+            this.cbStyle6.Text = "Digital Art";
+            this.cbStyle6.UseVisualStyleBackColor = true;
+            this.cbStyle6.CheckedChanged += new System.EventHandler(this.cbStyle6_CheckedChanged);
             // 
             // chStyle1
             // 
@@ -188,6 +193,7 @@ namespace Gourmet_s_Record
             this.cbPriceRange6.TabIndex = 5;
             this.cbPriceRange6.Text = "1000 and Higher";
             this.cbPriceRange6.UseVisualStyleBackColor = true;
+            this.cbPriceRange6.CheckedChanged += new System.EventHandler(this.cbPriceRange6_CheckedChanged);
             // 
             // cbPriceRange5
             // 
@@ -199,6 +205,7 @@ namespace Gourmet_s_Record
             this.cbPriceRange5.TabIndex = 4;
             this.cbPriceRange5.Text = "800 - 1000";
             this.cbPriceRange5.UseVisualStyleBackColor = true;
+            this.cbPriceRange5.CheckedChanged += new System.EventHandler(this.cbPriceRange5_CheckedChanged);
             // 
             // cbPriceRange4
             // 
@@ -210,6 +217,7 @@ namespace Gourmet_s_Record
             this.cbPriceRange4.TabIndex = 3;
             this.cbPriceRange4.Text = "600 - 800";
             this.cbPriceRange4.UseVisualStyleBackColor = true;
+            this.cbPriceRange4.CheckedChanged += new System.EventHandler(this.cbPriceRange4_CheckedChanged);
             // 
             // cbPriceRange3
             // 
@@ -221,6 +229,7 @@ namespace Gourmet_s_Record
             this.cbPriceRange3.TabIndex = 2;
             this.cbPriceRange3.Text = "400 - 600";
             this.cbPriceRange3.UseVisualStyleBackColor = true;
+            this.cbPriceRange3.CheckedChanged += new System.EventHandler(this.cbPriceRange3_CheckedChanged);
             // 
             // cbPriceRange2
             // 
@@ -232,6 +241,7 @@ namespace Gourmet_s_Record
             this.cbPriceRange2.TabIndex = 1;
             this.cbPriceRange2.Text = "200 - 400";
             this.cbPriceRange2.UseVisualStyleBackColor = true;
+            this.cbPriceRange2.CheckedChanged += new System.EventHandler(this.cbPriceRange2_CheckedChanged);
             // 
             // cbPriceRange1
             // 
@@ -243,11 +253,12 @@ namespace Gourmet_s_Record
             this.cbPriceRange1.TabIndex = 0;
             this.cbPriceRange1.Text = " 0 - 200";
             this.cbPriceRange1.UseVisualStyleBackColor = true;
+            this.cbPriceRange1.CheckedChanged += new System.EventHandler(this.cbPriceRange1_CheckedChanged);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.tbSearch);
             this.panel1.Controls.Add(this.cbFilter);
             this.panel1.Location = new System.Drawing.Point(140, 18);
@@ -257,18 +268,18 @@ namespace Gourmet_s_Record
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(813, 26);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 53;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSearch.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Location = new System.Drawing.Point(813, 26);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(112, 35);
+            this.btnSearch.TabIndex = 53;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // tbSearch
             // 
@@ -291,28 +302,31 @@ namespace Gourmet_s_Record
             this.cbFilter.Size = new System.Drawing.Size(180, 27);
             this.cbFilter.TabIndex = 1;
             this.cbFilter.Text = "Search by...";
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
-            // button2
+            // btnLogout
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._77e07300c4c6c41c0b79f20c037b408a;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(1184, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 64);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.White;
+            this.btnLogout.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._77e07300c4c6c41c0b79f20c037b408a;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Location = new System.Drawing.Point(1184, 28);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 64);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button1
+            // btnProfile
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._755bbb0ba94f6148c6293920d6bf04a1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(1089, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 64);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnProfile.BackColor = System.Drawing.Color.White;
+            this.btnProfile.BackgroundImage = global::Gourmet_s_Record.Properties.Resources._755bbb0ba94f6148c6293920d6bf04a1;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProfile.Location = new System.Drawing.Point(1089, 28);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(75, 64);
+            this.btnProfile.TabIndex = 8;
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // pictureBox1
             // 
@@ -341,8 +355,8 @@ namespace Gourmet_s_Record
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1283, 692);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -366,9 +380,9 @@ namespace Gourmet_s_Record
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox chStyle4;
-        private System.Windows.Forms.CheckBox chStyle3;
-        private System.Windows.Forms.CheckBox chStyle2;
+        private System.Windows.Forms.CheckBox cbStyle3;
+        private System.Windows.Forms.CheckBox cbStyle4;
+        private System.Windows.Forms.CheckBox cbStyle6;
         private System.Windows.Forms.CheckBox chStyle1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox cbPriceRange6;
@@ -380,12 +394,12 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.ComboBox cbFilter;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox cbStyle5;
+        private System.Windows.Forms.CheckBox cbStyle2;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

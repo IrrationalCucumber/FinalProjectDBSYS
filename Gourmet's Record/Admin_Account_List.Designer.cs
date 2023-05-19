@@ -39,7 +39,7 @@ namespace Gourmet_s_Record
             this.label2 = new System.Windows.Forms.Label();
             this.cbVerified = new System.Windows.Forms.CheckBox();
             this.tbSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbSearchBox = new System.Windows.Forms.TextBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,6 +54,7 @@ namespace Gourmet_s_Record
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(832, 525);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dateTimePicker1
             // 
@@ -61,6 +62,7 @@ namespace Gourmet_s_Record
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(262, 26);
             this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // radioButton1
             // 
@@ -153,14 +155,14 @@ namespace Gourmet_s_Record
             this.tbSearch.UseVisualStyleBackColor = false;
             this.tbSearch.Click += new System.EventHandler(this.tbSearch_Click);
             // 
-            // textBox1
+            // tbSearchBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(486, 26);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbSearchBox.Location = new System.Drawing.Point(112, 46);
+            this.tbSearchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSearchBox.Name = "tbSearchBox";
+            this.tbSearchBox.Size = new System.Drawing.Size(486, 26);
+            this.tbSearchBox.TabIndex = 23;
+            this.tbSearchBox.TextChanged += new System.EventHandler(this.tbSearchBox_TextChanged);
             // 
             // btnHome
             // 
@@ -198,7 +200,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.cbVerified);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbSearchBox);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.tbType);
             this.Controls.Add(this.tbUsername);
@@ -229,7 +231,7 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbVerified;
         private System.Windows.Forms.Button tbSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSearchBox;
         private System.Windows.Forms.Button btnHome;
     }
 }

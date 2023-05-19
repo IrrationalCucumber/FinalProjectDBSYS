@@ -29,8 +29,8 @@ namespace Gourmet_s_Record
         /// </summary>
         private void InitializeComponent()
         {
-            this.btEdit = new System.Windows.Forms.Button();
-            this.btSave = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,10 +52,10 @@ namespace Gourmet_s_Record
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnGallery = new System.Windows.Forms.Button();
             this.btUpload = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbBio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -68,32 +68,34 @@ namespace Gourmet_s_Record
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // btEdit
+            // btnEdit
             // 
-            this.btEdit.BackColor = System.Drawing.Color.RosyBrown;
-            this.btEdit.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btEdit.Location = new System.Drawing.Point(34, 646);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(191, 36);
-            this.btEdit.TabIndex = 60;
-            this.btEdit.Text = "EDIT";
-            this.btEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnEdit.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEdit.Location = new System.Drawing.Point(34, 646);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(191, 36);
+            this.btnEdit.TabIndex = 60;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btSave
+            // btnSave
             // 
-            this.btSave.BackColor = System.Drawing.Color.RosyBrown;
-            this.btSave.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.btSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btSave.Location = new System.Drawing.Point(34, 600);
-            this.btSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(191, 36);
-            this.btSave.TabIndex = 59;
-            this.btSave.Text = "SAVE";
-            this.btSave.UseVisualStyleBackColor = false;
-            this.btSave.Visible = false;
+            this.btnSave.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSave.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSave.Location = new System.Drawing.Point(34, 600);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(191, 36);
+            this.btnSave.TabIndex = 59;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label12
             // 
@@ -149,6 +151,7 @@ namespace Gourmet_s_Record
             this.tbProv.ReadOnly = true;
             this.tbProv.Size = new System.Drawing.Size(320, 26);
             this.tbProv.TabIndex = 97;
+            this.tbProv.TextChanged += new System.EventHandler(this.tbProv_TextChanged);
             // 
             // tbBrngy
             // 
@@ -159,6 +162,7 @@ namespace Gourmet_s_Record
             this.tbBrngy.ReadOnly = true;
             this.tbBrngy.Size = new System.Drawing.Size(320, 26);
             this.tbBrngy.TabIndex = 96;
+            this.tbBrngy.TextChanged += new System.EventHandler(this.tbBrngy_TextChanged);
             // 
             // tbCity
             // 
@@ -169,6 +173,7 @@ namespace Gourmet_s_Record
             this.tbCity.ReadOnly = true;
             this.tbCity.Size = new System.Drawing.Size(320, 26);
             this.tbCity.TabIndex = 95;
+            this.tbCity.TextChanged += new System.EventHandler(this.tbCity_TextChanged);
             // 
             // tbStreet
             // 
@@ -179,6 +184,7 @@ namespace Gourmet_s_Record
             this.tbStreet.ReadOnly = true;
             this.tbStreet.Size = new System.Drawing.Size(320, 26);
             this.tbStreet.TabIndex = 94;
+            this.tbStreet.TextChanged += new System.EventHandler(this.tbStreet_TextChanged);
             // 
             // tbHouse
             // 
@@ -189,6 +195,7 @@ namespace Gourmet_s_Record
             this.tbHouse.ReadOnly = true;
             this.tbHouse.Size = new System.Drawing.Size(320, 26);
             this.tbHouse.TabIndex = 93;
+            this.tbHouse.TextChanged += new System.EventHandler(this.tbHouse_TextChanged);
             // 
             // label6
             // 
@@ -211,6 +218,7 @@ namespace Gourmet_s_Record
             this.tbCN.ReadOnly = true;
             this.tbCN.Size = new System.Drawing.Size(320, 26);
             this.tbCN.TabIndex = 91;
+            this.tbCN.TextChanged += new System.EventHandler(this.tbCN_TextChanged);
             // 
             // tbEmail
             // 
@@ -221,6 +229,7 @@ namespace Gourmet_s_Record
             this.tbEmail.ReadOnly = true;
             this.tbEmail.Size = new System.Drawing.Size(320, 26);
             this.tbEmail.TabIndex = 90;
+            this.tbEmail.TextChanged += new System.EventHandler(this.tbEmail_TextChanged);
             // 
             // tbLN
             // 
@@ -231,6 +240,7 @@ namespace Gourmet_s_Record
             this.tbLN.ReadOnly = true;
             this.tbLN.Size = new System.Drawing.Size(320, 26);
             this.tbLN.TabIndex = 89;
+            this.tbLN.TextChanged += new System.EventHandler(this.tbLN_TextChanged);
             // 
             // tbFN
             // 
@@ -241,6 +251,7 @@ namespace Gourmet_s_Record
             this.tbFN.ReadOnly = true;
             this.tbFN.Size = new System.Drawing.Size(320, 26);
             this.tbFN.TabIndex = 88;
+            this.tbFN.TextChanged += new System.EventHandler(this.tbFN_TextChanged);
             // 
             // tbUsername
             // 
@@ -251,6 +262,7 @@ namespace Gourmet_s_Record
             this.tbUsername.ReadOnly = true;
             this.tbUsername.Size = new System.Drawing.Size(320, 26);
             this.tbUsername.TabIndex = 87;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label5
             // 
@@ -312,29 +324,31 @@ namespace Gourmet_s_Record
             this.label7.TabIndex = 82;
             this.label7.Text = "Username";
             // 
-            // button1
+            // btnOrder
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(34, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 36);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Order";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnOrder.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnOrder.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOrder.Location = new System.Drawing.Point(34, 151);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(191, 36);
+            this.btnOrder.TabIndex = 103;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // button2
+            // btnGallery
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(34, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 36);
-            this.button2.TabIndex = 104;
-            this.button2.Text = "Gallery";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnGallery.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnGallery.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnGallery.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGallery.Location = new System.Drawing.Point(34, 109);
+            this.btnGallery.Name = "btnGallery";
+            this.btnGallery.Size = new System.Drawing.Size(191, 36);
+            this.btnGallery.TabIndex = 104;
+            this.btnGallery.Text = "Gallery";
+            this.btnGallery.UseVisualStyleBackColor = false;
+            this.btnGallery.Click += new System.EventHandler(this.btnGallery_Click);
             // 
             // btUpload
             // 
@@ -348,15 +362,17 @@ namespace Gourmet_s_Record
             this.btUpload.TabIndex = 108;
             this.btUpload.Text = "Upload";
             this.btUpload.UseVisualStyleBackColor = false;
+            this.btUpload.Click += new System.EventHandler(this.btUpload_Click);
             // 
-            // textBox6
+            // tbBio
             // 
-            this.textBox6.Location = new System.Drawing.Point(813, 355);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(381, 338);
-            this.textBox6.TabIndex = 107;
+            this.tbBio.Location = new System.Drawing.Point(813, 355);
+            this.tbBio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbBio.Multiline = true;
+            this.tbBio.Name = "tbBio";
+            this.tbBio.Size = new System.Drawing.Size(381, 338);
+            this.tbBio.TabIndex = 107;
+            this.tbBio.TextChanged += new System.EventHandler(this.tbBio_TextChanged);
             // 
             // label1
             // 
@@ -378,6 +394,7 @@ namespace Gourmet_s_Record
             this.pictureBox1.Size = new System.Drawing.Size(180, 180);
             this.pictureBox1.TabIndex = 105;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -398,6 +415,7 @@ namespace Gourmet_s_Record
             this.btnHome.Size = new System.Drawing.Size(53, 47);
             this.btnHome.TabIndex = 110;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pictureBox3
             // 
@@ -429,11 +447,11 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btUpload);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbBio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGallery);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -455,8 +473,8 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btEdit);
-            this.Controls.Add(this.btSave);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnSave);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "User Profile";
@@ -471,8 +489,8 @@ namespace Gourmet_s_Record
         }
 
         #endregion
-        private System.Windows.Forms.Button btEdit;
-        private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -494,10 +512,10 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnGallery;
         private System.Windows.Forms.Button btUpload;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbBio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

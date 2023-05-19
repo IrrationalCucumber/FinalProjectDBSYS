@@ -73,5 +73,10 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

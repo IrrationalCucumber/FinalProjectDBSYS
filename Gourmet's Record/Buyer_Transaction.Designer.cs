@@ -46,11 +46,11 @@ namespace Gourmet_s_Record
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbBTTotalAmount = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbArtist = new System.Windows.Forms.Label();
+            this.lbArtTitle = new System.Windows.Forms.Label();
             this.tbBTFirstName = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -190,6 +190,7 @@ namespace Gourmet_s_Record
             this.tbBTLastname.Name = "tbBTLastname";
             this.tbBTLastname.Size = new System.Drawing.Size(319, 27);
             this.tbBTLastname.TabIndex = 13;
+            this.tbBTLastname.TextChanged += new System.EventHandler(this.tbBTLastname_TextChanged);
             // 
             // tbBTemail
             // 
@@ -199,6 +200,7 @@ namespace Gourmet_s_Record
             this.tbBTemail.Name = "tbBTemail";
             this.tbBTemail.Size = new System.Drawing.Size(320, 27);
             this.tbBTemail.TabIndex = 14;
+            this.tbBTemail.TextChanged += new System.EventHandler(this.tbBTemail_TextChanged);
             // 
             // tbBTContact
             // 
@@ -218,7 +220,7 @@ namespace Gourmet_s_Record
             this.tbBTaddress.Name = "tbBTaddress";
             this.tbBTaddress.Size = new System.Drawing.Size(319, 27);
             this.tbBTaddress.TabIndex = 16;
-            this.tbBTaddress.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.tbBTaddress.TextChanged += new System.EventHandler(this.tbBTaddress_TextChanged);
             // 
             // pictureBox2
             // 
@@ -268,21 +270,22 @@ namespace Gourmet_s_Record
             this.label14.TabIndex = 23;
             this.label14.Text = "Total Amount";
             // 
-            // textBox7
+            // tbBTTotalAmount
             // 
-            this.textBox7.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(231, 64);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(319, 27);
-            this.textBox7.TabIndex = 25;
+            this.tbBTTotalAmount.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBTTotalAmount.Location = new System.Drawing.Point(231, 64);
+            this.tbBTTotalAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbBTTotalAmount.Name = "tbBTTotalAmount";
+            this.tbBTTotalAmount.Size = new System.Drawing.Size(319, 27);
+            this.tbBTTotalAmount.TabIndex = 25;
+            this.tbBTTotalAmount.TextChanged += new System.EventHandler(this.tbBTTotalAmount_TextChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbPrice);
+            this.groupBox1.Controls.Add(this.lbArtist);
+            this.groupBox1.Controls.Add(this.lbArtTitle);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
@@ -292,32 +295,35 @@ namespace Gourmet_s_Record
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
-            // label15
+            // lbPrice
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(151, 114);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 20);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "/";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Location = new System.Drawing.Point(151, 114);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(13, 20);
+            this.lbPrice.TabIndex = 22;
+            this.lbPrice.Text = "/";
+            this.lbPrice.Click += new System.EventHandler(this.lbPrice_Click);
             // 
-            // label11
+            // lbArtist
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(151, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 20);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "/";
+            this.lbArtist.AutoSize = true;
+            this.lbArtist.Location = new System.Drawing.Point(151, 68);
+            this.lbArtist.Name = "lbArtist";
+            this.lbArtist.Size = new System.Drawing.Size(13, 20);
+            this.lbArtist.TabIndex = 21;
+            this.lbArtist.Text = "/";
+            this.lbArtist.Click += new System.EventHandler(this.lbArtist_Click);
             // 
-            // label3
+            // lbArtTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "/";
+            this.lbArtTitle.AutoSize = true;
+            this.lbArtTitle.Location = new System.Drawing.Point(151, 24);
+            this.lbArtTitle.Name = "lbArtTitle";
+            this.lbArtTitle.Size = new System.Drawing.Size(13, 20);
+            this.lbArtTitle.TabIndex = 20;
+            this.lbArtTitle.Text = "/";
+            this.lbArtTitle.Click += new System.EventHandler(this.lbArtTitle_Click);
             // 
             // tbBTFirstName
             // 
@@ -327,11 +333,12 @@ namespace Gourmet_s_Record
             this.tbBTFirstName.Name = "tbBTFirstName";
             this.tbBTFirstName.Size = new System.Drawing.Size(320, 27);
             this.tbBTFirstName.TabIndex = 27;
+            this.tbBTFirstName.TextChanged += new System.EventHandler(this.tbBTFirstName_TextChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.PeachPuff;
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.tbBTTotalAmount);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(604, 447);
@@ -392,7 +399,7 @@ namespace Gourmet_s_Record
             this.pictureBox3.TabIndex = 32;
             this.pictureBox3.TabStop = false;
             // 
-            // BuyerTransaction
+            // Buyer_Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -409,7 +416,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "BuyerTransaction";
+            this.Name = "Buyer_Transaction";
             this.Text = "BuyerTransaction";
             this.Load += new System.EventHandler(this.BuyerTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -445,16 +452,16 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbBTTotalAmount;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbBTFirstName;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbArtist;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lbArtTitle;
     }
 }

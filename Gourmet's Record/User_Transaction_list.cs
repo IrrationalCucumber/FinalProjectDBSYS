@@ -16,7 +16,7 @@ namespace Gourmet_s_Record
         {
             InitializeComponent();
         }
-
+//buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
 
@@ -28,6 +28,16 @@ namespace Gourmet_s_Record
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+//display image 
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

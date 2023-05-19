@@ -32,7 +32,7 @@ namespace Gourmet_s_Record
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void tbSearchBox_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -58,6 +58,16 @@ namespace Gourmet_s_Record
         }
 
         private void cbVerified_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+//datagrid
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

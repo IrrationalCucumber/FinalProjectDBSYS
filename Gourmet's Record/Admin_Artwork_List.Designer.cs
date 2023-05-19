@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TbArtist = new System.Windows.Forms.TextBox();
+            this.tbArtworkTitle = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbVerify = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,22 +58,25 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBox2
+            // TbArtist
             // 
-            this.textBox2.Location = new System.Drawing.Point(1022, 501);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 26);
-            this.textBox2.TabIndex = 48;
+            this.TbArtist.Location = new System.Drawing.Point(1022, 501);
+            this.TbArtist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TbArtist.Name = "TbArtist";
+            this.TbArtist.Size = new System.Drawing.Size(185, 26);
+            this.TbArtist.TabIndex = 48;
+            this.TbArtist.TextChanged += new System.EventHandler(this.TbArtist_TextChanged);
             // 
-            // textBox1
+            // tbArtworkTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(1022, 454);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 26);
-            this.textBox1.TabIndex = 47;
+            this.tbArtworkTitle.Location = new System.Drawing.Point(1022, 454);
+            this.tbArtworkTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbArtworkTitle.Name = "tbArtworkTitle";
+            this.tbArtworkTitle.Size = new System.Drawing.Size(185, 26);
+            this.tbArtworkTitle.TabIndex = 47;
+            this.tbArtworkTitle.TextChanged += new System.EventHandler(this.tbArtworkTitle_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -94,32 +97,35 @@
             this.tbVerify.TabStop = true;
             this.tbVerify.Text = "Verified";
             this.tbVerify.UseVisualStyleBackColor = true;
+            this.tbVerify.CheckedChanged += new System.EventHandler(this.tbVerify_CheckedChanged);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(964, 655);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 36);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnDelete.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(964, 655);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(191, 36);
+            this.btnDelete.TabIndex = 44;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(964, 610);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 36);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnUpdate.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(964, 610);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(191, 36);
+            this.btnUpdate.TabIndex = 43;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 
@@ -161,6 +167,7 @@
             this.cbVerified.TabIndex = 39;
             this.cbVerified.Text = "Verified";
             this.cbVerified.UseVisualStyleBackColor = true;
+            this.cbVerified.CheckedChanged += new System.EventHandler(this.cbVerified_CheckedChanged);
             // 
             // tbSearch
             // 
@@ -169,6 +176,7 @@
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(486, 26);
             this.tbSearch.TabIndex = 37;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // dataGridView1
             // 
@@ -179,6 +187,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(832, 525);
             this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnRefresh
             // 
@@ -193,6 +202,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(53, 45);
             this.btnRefresh.TabIndex = 50;
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnHome
             // 
@@ -203,19 +213,21 @@
             this.btnHome.Size = new System.Drawing.Size(53, 47);
             this.btnHome.TabIndex = 51;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(114, 86);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
-            this.button3.TabIndex = 52;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSearch.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Location = new System.Drawing.Point(114, 86);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(112, 35);
+            this.btnSearch.TabIndex = 52;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Account_List
             // 
@@ -223,16 +235,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1238, 720);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TbArtist);
+            this.Controls.Add(this.tbArtworkTitle);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbVerify);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -251,12 +263,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TbArtist;
+        private System.Windows.Forms.TextBox tbArtworkTitle;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton tbVerify;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -265,6 +277,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

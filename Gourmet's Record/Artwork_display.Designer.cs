@@ -311,6 +311,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.label4);
             this.Name = "Form2";
             this.Text = "Artwork";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

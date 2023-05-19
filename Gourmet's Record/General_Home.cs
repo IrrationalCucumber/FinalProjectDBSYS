@@ -17,12 +17,83 @@ namespace Gourmet_s_Record
             InitializeComponent();
         }
 
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+//filter price
+        private void cbPriceRange1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPriceRange2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPriceRange3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPriceRange4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPriceRange5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPriceRange6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
         private void chStyle1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void cbStyle2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbStyle3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbStyle4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbStyle5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbStyle6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+//buttons
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+//filter
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

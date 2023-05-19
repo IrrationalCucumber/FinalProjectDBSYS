@@ -31,33 +31,82 @@ namespace Gourmet_s_Record
         {
 
         }
-//textbox for artist profile
-        private void tbAUsername_TextChanged(object sender, EventArgs e)
+
+      
+//buttons
+
+
+        private void btnHome_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tbAFirstName_TextChanged(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+//textbox
+        private void tbUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void tbALastName_TextChanged(object sender, EventArgs e)
+        private void tbFN_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void tbAEmalAddress_TextChanged(object sender, EventArgs e)
+        private void tbLN_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void tbAContactNumber_TextChanged(object sender, EventArgs e)
+        private void tbEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbHouse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbStreet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBrngy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbProv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbBio_TextChanged(object sender, EventArgs e)
         {
 
         }
 //buttons
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnGallery_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
         {
 
         }
@@ -67,12 +116,17 @@ namespace Gourmet_s_Record
 
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btUpload_Click(object sender, EventArgs e)
+        {
+
+        }
+//user profile pic
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
