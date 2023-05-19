@@ -27,7 +27,7 @@ create table ARTWORKS
 	username varchar(20),
 	artTitle varchar(50),
 	artWidth int,
-	artHeight int,
+	artLength int,
 	artPrice int,
 	artType varchar(30),
 	artDescription text,
@@ -61,3 +61,16 @@ Delete from ACCOUNTS WHERE username = 'test'
 
 insert into ACCOUNTS (username, password, accountType, accountVerified, dateAdded)
 values('admin','admin','admin', 'verified' ,GETDATE())
+
+--query for updating ARTWORK
+UPDATE ARTWORKS 
+SET artTitle = "",
+artWidth = "",
+artLength = "",
+artPrice = "",
+artDescription = "",
+artType = "",
+artAvailable = ""
+WHERE artID =  AND username = ""
+
+--query for updating ACCOUNT
