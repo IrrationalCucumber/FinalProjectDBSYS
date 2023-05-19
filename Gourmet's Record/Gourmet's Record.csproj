@@ -95,6 +95,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Artwork_List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     <Compile Include="Admin_Account_List.Designer.cs">
       <DependentUpon>Admin_Account_List.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Artist_personal_gallery.resx">
       <DependentUpon>Artist_personal_gallery.cs</DependentUpon>
     </EmbeddedResource>
