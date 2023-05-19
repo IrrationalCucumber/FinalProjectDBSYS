@@ -78,5 +78,12 @@ namespace Gourmet_s_Record
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            General_Home home = new General_Home();
+            this.Close();
+            home.Show();
+        }
     }
 }

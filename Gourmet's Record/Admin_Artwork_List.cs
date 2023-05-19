@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,18 @@ namespace Gourmet_s_Record
 //buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            AdminHome home = new AdminHome();
+            this.Close();
+            home.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'Verified'", cn);
+            DataTable dtbl = new DataTable();
+            sqlData.Fill(dtbl);
 
+            dataGridView1.DataSource = dtbl;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -73,6 +80,11 @@ namespace Gourmet_s_Record
         }
 //database
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

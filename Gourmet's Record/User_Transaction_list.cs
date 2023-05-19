@@ -19,7 +19,9 @@ namespace Gourmet_s_Record
 //buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            General_Home home = new General_Home();
+            this.Close();
+            home.Show();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

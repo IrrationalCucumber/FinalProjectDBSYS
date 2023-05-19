@@ -132,23 +132,23 @@
       <DependentUpon>Buyer_Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
-    <Compile Include="User_Profile.cs">
+    <Compile Include="UpdateArtwork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User_Profile.Designer.cs">
-      <DependentUpon>User_Profile.cs</DependentUpon>
+    <Compile Include="UpdateArtwork.Designer.cs">
+      <DependentUpon>UpdateArtwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Artwork_display.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Artwork_display.Designer.cs">
       <DependentUpon>Artwork_display.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Homepage.Designer.cs">
-      <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
     <Compile Include="Sign_In.cs">
       <SubType>Form</SubType>
@@ -191,8 +191,11 @@
     <EmbeddedResource Include="General_Home.resx">
       <DependentUpon>General_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User_Profile.resx">
-      <DependentUpon>User_Profile.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateArtwork.resx">
+      <DependentUpon>UpdateArtwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Artist_Upload_Artwork.resx">
       <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
@@ -205,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Artwork_display.resx">
       <DependentUpon>Artwork_display.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Homepage.resx">
-      <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>

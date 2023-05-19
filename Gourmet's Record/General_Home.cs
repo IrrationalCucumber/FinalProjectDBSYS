@@ -85,7 +85,9 @@ namespace Gourmet_s_Record
 //buttons
         private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            UserProfile profile = new UserProfile();
+            this.Close();
+            profile.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
