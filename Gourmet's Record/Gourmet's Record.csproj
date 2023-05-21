@@ -185,6 +185,9 @@
     <EmbeddedResource Include="ArtistAccountProfile.resx">
       <DependentUpon>ArtistAccountProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="artistUpload.resx">
+      <DependentUpon>artistUpload.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuyerAccountProfile.resx">
       <DependentUpon>BuyerAccountProfile.cs</DependentUpon>
     </EmbeddedResource>

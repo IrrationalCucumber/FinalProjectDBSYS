@@ -29,10 +29,18 @@ namespace Gourmet_s_Record
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // artistUpload
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "artistUpload";
             this.Text = "artistUpload";
+            this.Load += new System.EventHandler(this.artistUpload_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
