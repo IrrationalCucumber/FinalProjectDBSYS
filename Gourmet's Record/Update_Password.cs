@@ -13,24 +13,11 @@ namespace Gourmet_s_Record
 {
     public partial class Update_Password : Form
     {
+        SqlConnection con;
+        SqlCommand cmd;
         public Update_Password()
         {
             InitializeComponent();
-        }
-
-        private void tbUsername_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tbOldPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbNewPassword1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btSubmit_Click(object sender, EventArgs e)
@@ -39,33 +26,20 @@ namespace Gourmet_s_Record
             {
                 if (tbNewPassword1.Text != tbOldPassword.Text)
                 {
-                    /*
-                    cmd = new SqlCommand("select * from ACCOUNTS where username='" + tbUsername.Text + "'", cn);
-                    dr = cmd.ExecuteReader();
-                    if (dr.Read())
-                    {
-                        dr.Close();
-                        lbUsernameMessage.Text = "Username Already exist please try another";
-                    }
-                    else
-                    */
-
-                    //dr.Close();
-                    string UserName = tbUsername.Text;
+                    
+                    string UserName = SignIn.accountName;
                     string Password = Encryption.Encrypt(tbNewPassword1.Text.ToString());
-                    cn.Close();
-                    cn.Open();
+                    con.Close();
+                    con.Open();
                     cmd = new SqlCommand("update ACCOUNTS" +
                         "set password = '" + tbNewPassword1 + "'" +
-                        "WHERE username = '" + tbUsername + "'", cn);
+                        "WHERE username = '" + tbUsername + "'", con);
                     //cmd.Parameters.AddWithValue("username", UserName);
                     //cmd.Parameters.AddWithValue("password", Password);
                     cmd.ExecuteNonQuery();
-                    cn.Close();
+                    con.Close();
                     MessageBox.Show("Your Account has been updated .\n Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Menu menu = new Menu();
-                    menu.Show();
 
                 }
                 else
@@ -77,6 +51,17 @@ namespace Gourmet_s_Record
             {
                 lbUsernameMessage.Text = "Please enter value in all field.";
             }
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Update_Password_Load(object sender, EventArgs e)
+        {
+            con = new SqlConnection();
+            con.Open();
         }
     }
 }

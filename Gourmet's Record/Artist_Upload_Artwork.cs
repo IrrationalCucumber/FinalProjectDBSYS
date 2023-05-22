@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -14,100 +16,29 @@ namespace Gourmet_s_Record
 {
     public partial class Artist_Upload_Artwork : Form
     {
+        SqlConnection con;
+        SqlDataReader dr;
+        SqlCommand cmd;
+        byte[] imageData;
         public Artist_Upload_Artwork()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-//texboxes 
-//kalimot ko unsaon tung naa needed dapat ma fill upan ang textbox katung naay * 
-
-        private void tbDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbArtTitle_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        // error message if di ma upload ang image
-        private void emImage_Click(object sender, EventArgs e)
-        {
-
-        }
-        //image upload
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //width
-        private void tbWidth_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        //length
-        private void tbLength_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        //type combobox akong gi gamit sa type para ka choose ug unsa na type sa artwork
-        private void CBArtType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-//Buttons
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (tbArtTitle.Text != string.Empty || tbDescription.Text != string.Empty || tbLength.Text != string.Empty || tbPrice.Text != string.Empty || tbWidth.Text != string.Empty) 
             {
-                cn.Close();
-                cn.Open();
-               // cmd = new SqlCommand("select * from ARTWORKS where artID='" + //.Text + "'", cn);
-                dr = cmd.ExecuteReader();
-                //if method for invalid input
-
-                if (dr.Read())
-                {
-                    dr.Close();
-                    lbMessage.Text = "Book already exist please try another ";
-                }
-                else
-                {
-                    dr.Close();
                     //int bookID = Int32.Parse(tbBookID.Text);
-                    string ArtTitle = tbArtTitle.Text;
-                    string Description = tbDescription.Text;
-                    string Length = tbLength.Text;
-                    string Price = tbPrice.Text;
-                    string Width =  tbWidth.Text;
-                    string username = SignIn.AccountName;
-                    //string date = DateTime.Now.ToString();
-                    string type = CBArtType.SelectedItem.ToString();
-                    cn.Close();
-                    cn.Open();
-                    //@@bookId,
+                string ArtTitle = tbArtTitle.Text;
+                string Description = tbDescription.Text;
+                string Length = tbLength.Text;
+                string Price = tbPrice.Text;
+                string Width =  tbWidth.Text;
+                string type = CBArtType.SelectedItem.ToString();
+                string username = SignIn.accountName;
+                    con.Close();
+                    con.Open();
                     cmd = new SqlCommand("insert into BOOKS values( @username,@artTitle,@artWidth,@artHeight, @artPrice, @artType, @artDescription, @artImage, @artAvailable, @dateAdded)", cn);
                     //cmd.Parameters.AddWithValue("bookId", bookID);
                     cmd.Parameters.AddWithValue("username", username);
@@ -116,16 +47,18 @@ namespace Gourmet_s_Record
                     cmd.Parameters.AddWithValue("artDescription", Description);
                     cmd.Parameters.AddWithValue("Length", Length);
                     cmd.Parameters.AddWithValue("Price", Price);
+                cmd.Parameters.AddWithValue("artImage", imageData);
                     cmd.Parameters.AddWithValue("dateAdded", DateTime.Now);
                     cmd.Parameters.AddWithValue("artAvailable", "Available" );
                     cmd.ExecuteNonQuery();
-                    cn.Close();
-                    MessageBox.Show("Book has been added to the Library", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                    con.Close();
+                    MessageBox.Show("Artwork added in the Gallery", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
 
             }
             else
             {
+                lbMessage.Visible = true;
                 lbMessage.Text = "Please enter value in all field.";
             }
         }
@@ -142,44 +75,31 @@ namespace Gourmet_s_Record
             home.Show();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Artist_Upload_Artwork_Load(object sender, EventArgs e)
         {
-
+            con = new SqlConnection("");
+            con.Open();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void btUpload_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select an image";
+            openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
 
-        }
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
+                // Convert the image to a byte array
+                //byte[] imageData;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    Image image = Image.FromFile(filePath);
+                    image.Save(ms, ImageFormat.Jpeg); // Change this to the format of your choice
+                    imageData = ms.ToArray();
+                }
+            }
         }
     }
 }

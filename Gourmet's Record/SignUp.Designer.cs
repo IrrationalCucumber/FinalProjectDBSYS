@@ -1,7 +1,7 @@
 ﻿
 namespace Gourmet_s_Record
 {
-    partial class Sign_Up
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,8 @@ namespace Gourmet_s_Record
             this.cbAcctType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbConfirm = new System.Windows.Forms.TextBox();
+            this.lnkSU = new System.Windows.Forms.LinkLabel();
+            this.label6 = new System.Windows.Forms.Label();
             this.lbMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@ namespace Gourmet_s_Record
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(276, 414);
+            this.linkLabel1.Location = new System.Drawing.Point(398, 591);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(40, 13);
@@ -62,24 +64,26 @@ namespace Gourmet_s_Record
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label5.Location = new System.Drawing.Point(139, 414);
+            this.label5.Location = new System.Drawing.Point(198, 591);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Already have an Account?";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 175);
+            this.label3.Location = new System.Drawing.Point(57, 181);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 22;
             this.label3.Text = "Password";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -92,13 +96,14 @@ namespace Gourmet_s_Record
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btCancel
             // 
             this.btCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btCancel.Location = new System.Drawing.Point(142, 373);
+            this.btCancel.Location = new System.Drawing.Point(139, 358);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(175, 23);
             this.btCancel.TabIndex = 20;
@@ -111,7 +116,7 @@ namespace Gourmet_s_Record
             this.btSignIn.BackColor = System.Drawing.Color.RosyBrown;
             this.btSignIn.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btSignIn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btSignIn.Location = new System.Drawing.Point(142, 344);
+            this.btSignIn.Location = new System.Drawing.Point(139, 329);
             this.btSignIn.Name = "btSignIn";
             this.btSignIn.Size = new System.Drawing.Size(175, 23);
             this.btSignIn.TabIndex = 19;
@@ -121,10 +126,11 @@ namespace Gourmet_s_Record
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(93, 192);
+            this.tbPassword.Location = new System.Drawing.Point(93, 198);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(292, 20);
             this.tbPassword.TabIndex = 18;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // tbUsername
             // 
@@ -132,6 +138,7 @@ namespace Gourmet_s_Record
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(292, 20);
             this.tbUsername.TabIndex = 17;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label1
             // 
@@ -164,17 +171,18 @@ namespace Gourmet_s_Record
             "ARTIST",
             "BUYER"});
             this.cbAcctType.Location = new System.Drawing.Point(93, 87);
-            this.cbAcctType.Margin = new System.Windows.Forms.Padding(2);
+            this.cbAcctType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAcctType.Name = "cbAcctType";
             this.cbAcctType.Size = new System.Drawing.Size(292, 21);
             this.cbAcctType.TabIndex = 35;
+            this.cbAcctType.SelectedIndexChanged += new System.EventHandler(this.cbAcctType_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 230);
+            this.label4.Location = new System.Drawing.Point(57, 236);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 13);
@@ -183,30 +191,58 @@ namespace Gourmet_s_Record
             // 
             // tbConfirm
             // 
-            this.tbConfirm.Location = new System.Drawing.Point(93, 246);
+            this.tbConfirm.Location = new System.Drawing.Point(93, 252);
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.Size = new System.Drawing.Size(292, 20);
             this.tbConfirm.TabIndex = 36;
+            // 
+            // lnkSU
+            // 
+            this.lnkSU.AutoSize = true;
+            this.lnkSU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkSU.Location = new System.Drawing.Point(269, 400);
+            this.lnkSU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkSU.Name = "lnkSU";
+            this.lnkSU.Size = new System.Drawing.Size(40, 13);
+            this.lnkSU.TabIndex = 39;
+            this.lnkSU.TabStop = true;
+            this.lnkSU.Text = "Sign In";
+            this.lnkSU.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSU_LinkClicked);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label6.Location = new System.Drawing.Point(136, 400);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Already have an Account?";
             // 
             // lbMessage
             // 
             this.lbMessage.AutoSize = true;
             this.lbMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lbMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMessage.ForeColor = System.Drawing.Color.Red;
-            this.lbMessage.Location = new System.Drawing.Point(208, 292);
+            this.lbMessage.Location = new System.Drawing.Point(139, 291);
             this.lbMessage.Name = "lbMessage";
             this.lbMessage.Size = new System.Drawing.Size(0, 13);
-            this.lbMessage.TabIndex = 38;
+            this.lbMessage.TabIndex = 40;
             this.lbMessage.Visible = false;
             // 
-            // Sign_Up
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(449, 483);
+            this.ClientSize = new System.Drawing.Size(446, 460);
             this.Controls.Add(this.lbMessage);
+            this.Controls.Add(this.lnkSU);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbConfirm);
             this.Controls.Add(this.cbAcctType);
@@ -221,7 +257,7 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Sign_Up";
+            this.Name = "SignUp";
             this.Text = "SignUp";
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
@@ -244,6 +280,8 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.ComboBox cbAcctType;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbConfirm;
+        private System.Windows.Forms.LinkLabel lnkSU;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbMessage;
     }
 }

@@ -13,6 +13,7 @@ namespace Gourmet_s_Record
 {
     public partial class UserList : Form
     {
+        SqlConnection cn;
         public UserList()
         {
             InitializeComponent();
@@ -20,7 +21,14 @@ namespace Gourmet_s_Record
 
         private void UserList_Load(object sender, EventArgs e)
         {
+            cn = new SqlConnection(@"");
+            cn.Open();
 
+            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ACCOUNTS", cn);
+            DataTable dtbl = new DataTable();
+            sqlData.Fill(dtbl);
+
+            //dataGridView1.DataSource = dtbl;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -36,7 +44,7 @@ namespace Gourmet_s_Record
             DataTable dtbl = new DataTable();
             sqlData.Fill(dtbl);
 
-            dataGridView1.DataSource = dtbl;
+            //dataGridView1.DataSource = dtbl;
         }
 
         private void tbSearchBox_TextChanged(object sender, EventArgs e)
@@ -46,11 +54,24 @@ namespace Gourmet_s_Record
 
         private void tbSearch_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'Verified'", cn);
-            DataTable dtbl = new DataTable();
-            sqlData.Fill(dtbl);
+            if (cbVerified.Checked == true)
+            {
+                //string date = dtp.Value.ToString("yyyy-MM-dd");
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ACCOUNTS WHERE username = '" + tbSearch.Text + "' AND accountVerified = 'verified'", cn);
+                DataTable dtbl = new DataTable();
+                sqlData.Fill(dtbl);
 
-            dataGridView1.DataSource = dtbl;
+                //dataGridView1.DataSource = dtbl;
+            }
+            else
+            {
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ACCOUNTS WHERE username = '" + tbSearch.Text + "'", cn);
+                DataTable dtbl = new DataTable();
+                sqlData.Fill(dtbl);
+
+                //dataGridView1.DataSource = dtbl;
+            }
+        
         }
 
         private void tbUsername_TextChanged(object sender, EventArgs e)
@@ -75,7 +96,25 @@ namespace Gourmet_s_Record
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+            if (cbVerified.Checked == true) {
+                string date = dtp.Value.ToString("yyyy-MM-dd"); // format the date value as yyyy-MM-dd
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ACCOUNTS WHERE username = '" + tbSearch.Text + "' AND accountVerified = 'verified'AND dateAdded = @date", cn);
+                sqlData.SelectCommand.Parameters.AddWithValue("@date", date); // use a parameterized query to avoid SQL injection
+                DataTable dtbl = new DataTable();
+                sqlData.Fill(dtbl);
 
+                //dataGridView1.DataSource = dtbl;
+            }
+            else
+            {
+                string date = dtp.Value.ToString("yyyy-MM-dd"); // format the date value as yyyy-MM-dd
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ACCOUNTS WHERE username = '" + tbSearch.Text + "' AND accountVerified = 'verified'AND dateAdded = @date", cn);
+                sqlData.SelectCommand.Parameters.AddWithValue("@date", date); // use a parameterized query to avoid SQL injection
+                DataTable dtbl = new DataTable();
+                sqlData.Fill(dtbl);
+
+                //dataGridView1.DataSource = dtbl;
+            }
         }
 //datagrid
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

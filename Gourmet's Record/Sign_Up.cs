@@ -13,56 +13,22 @@ namespace Gourmet_s_Record
 {
     public partial class Sign_Up : Form
     {
+        SqlCommand cmd;
+        SqlDataReader dr;
+        SqlConnection con;
         public Sign_Up()
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
-
-        public string AccountName;
+        
         public int userID;
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SignUp_Load(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            con.Open();
         }
 
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-        //Enter Username
-        private void UptbUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        //Enter Password
-        private void UptbEnPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //Error message sa password
-        private void lbMessage_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btSignIn_Click(object sender, EventArgs e)
         {
@@ -78,49 +44,70 @@ namespace Gourmet_s_Record
                 MessageBox.Show(ex.Message);
             }
            */
-
+            try
+            {
+                if (tbPassword.Text != string.Empty || tbConfirm.Text != string.Empty || tbUsername.Text != string.Empty)
+                {
+                    if (tbConfirm.Text == tbPassword.Text)
+                    {
+                        cmd = new SqlCommand("select * from ACCOUNTS where username='" + tbUsername.Text + "'", con);
+                        dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            dr.Close();
+                            lbMessage.Visible = true;
+                            lbMessage.Text = "Username Already exist please try another";
+                        }
+                        else
+                        {
+                            dr.Close();
+                            string UserName = tbUsername.Text;
+                            string Password = Encryption.Encrypt(tbPassword.Text.ToString());
+                            string type = cbAcctType.SelectedItem.ToString();
+                            con.Close();
+                            con.Open();
+                            cmd = new SqlCommand("insert into ACCOUNTS values(@username,@password,@accountType, @dateAdded)", con);
+                            cmd.Parameters.AddWithValue("username", UserName);
+                            cmd.Parameters.AddWithValue("password", Password);
+                            cmd.Parameters.AddWithValue("accountType", type);
+                            cmd.Parameters.AddWithValue("dateAdded", DateTime.Now);
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+                            MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            SignIn si = new SignIn();
+                            si.Show();
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        lbMessage.Visible = true;
+                        lbMessage.Text = "Please enter both password same ";
+                    }
+                }
+                else
+                {
+                    lbMessage.Visible = true;
+                    lbMessage.Text = "Please enter value in all field.";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-      //  private void tbAccT_TextChanged(object sender, EventArgs e)
-      //  {
-
-      //  }
-
-//textbox and combo box for user input
-        //account type combobox
-        private void cbAcctType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbFirstname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbLastname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btCancel_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignIn si = new SignIn();
+            this.Close();
+            si.Show();
         }
     }
 }

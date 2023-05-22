@@ -52,6 +52,7 @@ namespace Gourmet_s_Record
             this.label1.Size = new System.Drawing.Size(125, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign in";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbUsername
             // 
@@ -59,6 +60,7 @@ namespace Gourmet_s_Record
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(292, 20);
             this.tbUsername.TabIndex = 1;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // tbPassword
             // 
@@ -92,7 +94,6 @@ namespace Gourmet_s_Record
             this.btCancel.TabIndex = 4;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = false;
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // label2
             // 
@@ -104,6 +105,7 @@ namespace Gourmet_s_Record
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -126,7 +128,7 @@ namespace Gourmet_s_Record
             this.lbMessage.Size = new System.Drawing.Size(74, 13);
             this.lbMessage.TabIndex = 7;
             this.lbMessage.Text = "Error message";
-            this.lbMessage.Visible = false;
+            this.lbMessage.Click += new System.EventHandler(this.lbMessage_Click);
             // 
             // linkLabel1
             // 

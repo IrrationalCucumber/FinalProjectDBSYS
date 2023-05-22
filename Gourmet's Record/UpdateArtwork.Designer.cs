@@ -55,10 +55,10 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(673, 275);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPrice.Location = new System.Drawing.Point(505, 223);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(376, 22);
+            this.tbPrice.Size = new System.Drawing.Size(283, 20);
             this.tbPrice.TabIndex = 49;
             // 
             // label5
@@ -66,9 +66,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(530, 277);
+            this.label5.Location = new System.Drawing.Point(398, 225);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 48;
             this.label5.Text = "Price";
             // 
@@ -82,36 +83,38 @@
             "Spray Painting",
             "Sculpture",
             "Digital Art"});
-            this.CBArtType.Location = new System.Drawing.Point(672, 223);
-            this.CBArtType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CBArtType.Location = new System.Drawing.Point(504, 181);
+            this.CBArtType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CBArtType.Name = "CBArtType";
-            this.CBArtType.Size = new System.Drawing.Size(376, 24);
+            this.CBArtType.Size = new System.Drawing.Size(283, 21);
             this.CBArtType.TabIndex = 47;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(877, 167);
+            this.label7.Location = new System.Drawing.Point(658, 136);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 16);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 46;
             this.label7.Text = "Length";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(674, 169);
+            this.label6.Location = new System.Drawing.Point(506, 137);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 16);
+            this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 45;
             this.label6.Text = "Width";
             // 
             // tbLength
             // 
-            this.tbLength.Location = new System.Drawing.Point(935, 164);
-            this.tbLength.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbLength.Location = new System.Drawing.Point(701, 133);
+            this.tbLength.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbLength.Name = "tbLength";
-            this.tbLength.Size = new System.Drawing.Size(113, 22);
+            this.tbLength.Size = new System.Drawing.Size(86, 20);
             this.tbLength.TabIndex = 44;
             // 
             // btnCancel
@@ -119,10 +122,10 @@
             this.btnCancel.BackColor = System.Drawing.Color.RosyBrown;
             this.btnCancel.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(878, 520);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(658, 422);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(170, 29);
+            this.btnCancel.Size = new System.Drawing.Size(128, 24);
             this.btnCancel.TabIndex = 43;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -132,10 +135,10 @@
             this.btnSave.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSave.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(678, 520);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(508, 422);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(170, 29);
+            this.btnSave.Size = new System.Drawing.Size(128, 24);
             this.btnSave.TabIndex = 42;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -146,35 +149,36 @@
             this.emImage.AutoSize = true;
             this.emImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic);
             this.emImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.emImage.Location = new System.Drawing.Point(66, 541);
+            this.emImage.Location = new System.Drawing.Point(50, 440);
+            this.emImage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emImage.Name = "emImage";
-            this.emImage.Size = new System.Drawing.Size(101, 17);
+            this.emImage.Size = new System.Drawing.Size(75, 13);
             this.emImage.TabIndex = 41;
             this.emImage.Text = "Error Message";
             // 
             // tbDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(671, 327);
-            this.tbDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbDescription.Location = new System.Drawing.Point(503, 266);
+            this.tbDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDescription.Multiline = true;
             this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(377, 172);
+            this.tbDescription.Size = new System.Drawing.Size(284, 140);
             this.tbDescription.TabIndex = 40;
             // 
             // tbWidth
             // 
-            this.tbWidth.Location = new System.Drawing.Point(736, 164);
-            this.tbWidth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbWidth.Location = new System.Drawing.Point(552, 133);
+            this.tbWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbWidth.Name = "tbWidth";
-            this.tbWidth.Size = new System.Drawing.Size(113, 22);
+            this.tbWidth.Size = new System.Drawing.Size(86, 20);
             this.tbWidth.TabIndex = 39;
             // 
             // tbArtTitle
             // 
-            this.tbArtTitle.Location = new System.Drawing.Point(672, 115);
-            this.tbArtTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbArtTitle.Location = new System.Drawing.Point(504, 93);
+            this.tbArtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbArtTitle.Name = "tbArtTitle";
-            this.tbArtTitle.Size = new System.Drawing.Size(376, 22);
+            this.tbArtTitle.Size = new System.Drawing.Size(283, 20);
             this.tbArtTitle.TabIndex = 38;
             // 
             // label4
@@ -182,9 +186,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(530, 329);
+            this.label4.Location = new System.Drawing.Point(398, 267);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 17);
+            this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 37;
             this.label4.Text = "Description:";
             // 
@@ -193,9 +198,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(529, 225);
+            this.label3.Location = new System.Drawing.Point(397, 183);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 36;
             this.label3.Text = "Type:";
             // 
@@ -204,9 +210,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(530, 169);
+            this.label2.Location = new System.Drawing.Point(398, 137);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 35;
             this.label2.Text = "Dimension:";
             // 
@@ -215,9 +222,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(529, 120);
+            this.label1.Location = new System.Drawing.Point(397, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 34;
             this.label1.Text = "Title:";
             // 
@@ -225,10 +233,10 @@
             // 
             this.pictureBox3.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(453, 116);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(340, 94);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 407);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 331);
             this.pictureBox3.TabIndex = 52;
             this.pictureBox3.TabStop = false;
             // 
@@ -236,10 +244,10 @@
             // 
             this.pictureBox2.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(5, 116);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 94);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 407);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 331);
             this.pictureBox2.TabIndex = 51;
             this.pictureBox2.TabStop = false;
             // 
@@ -247,10 +255,10 @@
             // 
             this.button1.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.kindpng_822748;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(5, 48);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(4, 39);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 38);
+            this.button1.Size = new System.Drawing.Size(35, 31);
             this.button1.TabIndex = 50;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -258,18 +266,18 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(69, 116);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 94);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 407);
+            this.pictureBox1.Size = new System.Drawing.Size(276, 331);
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
             // UpdateArtwork
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 606);
+            this.ClientSize = new System.Drawing.Size(803, 494);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -290,6 +298,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdateArtwork";
             this.Text = "UpdateArtwork";
             this.Load += new System.EventHandler(this.UpdateArtwork_Load);

@@ -15,14 +15,9 @@ namespace Gourmet_s_Record
 {
     public partial class SignIn : Form
     {
-        public static string accountName;
+        public string accountName;
         public int id;
         Thread th;
-        public static bool isAdmin;
-        public static bool isArtist;
-        public static bool isBuyer;
-
-
         public SignIn()
         {
             InitializeComponent();
@@ -30,22 +25,39 @@ namespace Gourmet_s_Record
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
         public void gotoHome(object obj)
         {
-            Application.Run(new General_Home());
-        }
-        public void gotoAdminHome(object obj)
-        {
-            Application.Run(new AdminHome());
+            Application.Run(new Homepage());
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
 
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lbMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        public static string AccountName;
+
         private void btSignIn_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand CheckifExist = new SqlCommand("Select * from ACCOUNTS where username = '" + tbUsername.Text + "' and password='" + tbPassword.Text + "'", con);
+                SqlCommand CheckifExist = new SqlCommand("Select * from [dbo].[ACCOUNTS] where username = '" + tbUsername.Text + "' and password='" + tbPassword.Text + "'", con);
                 CheckifExist.Parameters.AddWithValue("@username", tbUsername.Text);
                 CheckifExist.Parameters.AddWithValue("@password", tbPassword.Text);
 
@@ -54,12 +66,10 @@ namespace Gourmet_s_Record
                 SqlDataReader dt = CheckifExist.ExecuteReader();
                 if (tbUsername.Text == "" && tbPassword.Text == "")
                 {
-                    lbMessage.Visible = true;
-                    lbMessage.Text = "Please provide username and password";
+                    MessageBox.Show("Please provide username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (!dt.HasRows)
                 {
-                    lbMessage.Visible = true;
                     lbMessage.Text = "Username or Password incorrect";
                 }
 
@@ -72,18 +82,17 @@ namespace Gourmet_s_Record
                     {
                         MessageBox.Show("Success! Welcome: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         isAdmin = true;
-                        accountName = tbUsername.Text;
+                        AccountName = tbUsername.Text;
                         this.Close();
-                        th = new Thread(gotoAdminHome);
-                        th.SetApartmentState(ApartmentState.STA);
-                        th.Start();
+                        adminHome home = new adminHome();
+                        home.Show();
                     }
 
                     else if (type == "Artist")
                     {
                         MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         isArtist = true;
-                        accountName = tbUsername.Text;
+                        AccountName = tbUsername.Text;
                         this.Close();
                         th = new Thread(gotoHome);
                         th.SetApartmentState(ApartmentState.STA);
@@ -94,7 +103,7 @@ namespace Gourmet_s_Record
                     {
                         MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         isBuyer = true;
-                        accountName = tbUsername.Text;
+                        AccountName = tbUsername.Text;
                         this.Close();
                         th = new Thread(gotoHome);
                         th.SetApartmentState(ApartmentState.STA);
@@ -109,39 +118,34 @@ namespace Gourmet_s_Record
                 MessageBox.Show(ex.Message);
             }
 
-        }
-        //method to determin the account type
-        private string GetUserType(string username)
-        {
-            string userType = string.Empty;
-            string query = "SELECT accountType FROM ACCOUNTS WHERE username = @username";
 
-            using (con)
-            {
-                con.Open();
 
-                using (SqlCommand command = new SqlCommand(query, con))
-                {
-                    command.Parameters.AddWithValue("@Username", username);
-                    object result = command.ExecuteScalar();
-                    userType = result != null ? result.ToString() : string.Empty;
-                }
-            }
-
-            return userType;
-        }
-
-        private void btCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Sign_Up su = new Sign_Up();
+            SignUp si = new SignUp();
             this.Close();
-            su.Show();
-
+            si.Show();
         }
+    }
+    private string GetUserType(string username)
+    {
+        string userType = string.Empty;
+        string query = "SELECT accountType FROM ACCOUNTS WHERE username = @username";
+
+        using (con)
+        {
+            con.Open();
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@Username", username);
+                object result = command.ExecuteScalar();
+                userType = result != null ? result.ToString() : string.Empty;
+            }
+        }
+
+        return userType;
     }
 }
