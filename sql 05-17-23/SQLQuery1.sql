@@ -39,14 +39,13 @@ create table ARTWORKS
 	FOREIGN KEY (username) references ACCOUNTS(username)
 )
 
-create table BOOKMARK
+create table TRANSACTION
 (
-	bookmarkID int,
-	userID int,
-	recipeID int,
-	primary key (bookmarkID),
-	FOREIGN KEY (userID) REFERENCES ACCOUNTS(userID),
-	FOREIGN KEY (recipeID) REFERENCES RECIPE(recipeID)
+	transactionID int IDENTITY (1,1)
+	username varchar(30),
+	artID int,
+	FOREIGN KEY (artID) REFERENCES ARTWORKS(artID)
+	FOREIGN KEY (username) REFERENCES ACCOUNTS(username)
 )
 
 Drop table BOOKMARK
