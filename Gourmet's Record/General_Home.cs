@@ -99,5 +99,10 @@ namespace Gourmet_s_Record
         {
 
         }
+//combobox
+        private void cbStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

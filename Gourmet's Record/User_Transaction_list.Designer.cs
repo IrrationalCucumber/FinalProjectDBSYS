@@ -39,10 +39,12 @@ namespace Gourmet_s_Record
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,7 +61,7 @@ namespace Gourmet_s_Record
             // 
             this.btnHome.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.kindpng_822748;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHome.Location = new System.Drawing.Point(34, 46);
+            this.btnHome.Location = new System.Drawing.Point(29, 33);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(53, 47);
             this.btnHome.TabIndex = 52;
@@ -71,7 +73,7 @@ namespace Gourmet_s_Record
             this.btnSearch.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSearch.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearch.Location = new System.Drawing.Point(107, 86);
+            this.btnSearch.Location = new System.Drawing.Point(102, 73);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 35);
@@ -82,7 +84,7 @@ namespace Gourmet_s_Record
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(105, 46);
+            this.tbSearch.Location = new System.Drawing.Point(100, 33);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(412, 26);
@@ -106,7 +108,7 @@ namespace Gourmet_s_Record
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(889, 180);
+            this.pictureBox1.Location = new System.Drawing.Point(889, 247);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(322, 400);
@@ -119,9 +121,9 @@ namespace Gourmet_s_Record
             // 
             this.pictureBox2.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(889, 588);
+            this.pictureBox2.Location = new System.Drawing.Point(889, 655);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(322, 112);
+            this.pictureBox2.Size = new System.Drawing.Size(322, 45);
             this.pictureBox2.TabIndex = 110;
             this.pictureBox2.TabStop = false;
             // 
@@ -129,9 +131,9 @@ namespace Gourmet_s_Record
             // 
             this.pictureBox3.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(889, 46);
+            this.pictureBox3.Location = new System.Drawing.Point(889, 175);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(322, 126);
+            this.pictureBox3.Size = new System.Drawing.Size(322, 64);
             this.pictureBox3.TabIndex = 111;
             this.pictureBox3.TabStop = false;
             // 
@@ -141,7 +143,7 @@ namespace Gourmet_s_Record
             this.cbStatus.Items.AddRange(new object[] {
             "Approved",
             "Pending"});
-            this.cbStatus.Location = new System.Drawing.Point(633, 46);
+            this.cbStatus.Location = new System.Drawing.Point(628, 33);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(228, 28);
             this.cbStatus.TabIndex = 112;
@@ -151,11 +153,21 @@ namespace Gourmet_s_Record
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(540, 49);
+            this.label2.Location = new System.Drawing.Point(535, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 114;
             this.label2.Text = "Status";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.Untitled18_20221019160221;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(1111, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 86);
+            this.pictureBox4.TabIndex = 115;
+            this.pictureBox4.TabStop = false;
             // 
             // User_Transaction_list
             // 
@@ -163,6 +175,7 @@ namespace Gourmet_s_Record
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1238, 720);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.pictureBox3);
@@ -180,6 +193,7 @@ namespace Gourmet_s_Record
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +210,6 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

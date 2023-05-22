@@ -177,7 +177,12 @@ namespace Gourmet_s_Record
                 }
             }
         }
-//user profile pic
-       
+
+        private void lbUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+        //user profile pic
+
     }
 }

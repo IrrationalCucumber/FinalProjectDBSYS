@@ -18,6 +18,7 @@ create table ACCOUNTS
 	addressBarangay varchar(30) null,
 	addressStreet varchar(50) null,
 	addressHome varchar(20) null,
+	profileImage image null,
 	PRIMARY KEY (username)
 )
 
