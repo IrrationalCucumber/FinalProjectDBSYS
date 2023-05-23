@@ -39,7 +39,7 @@ namespace Gourmet_s_Record
                 string username = SignIn.accountName;
                     con.Close();
                     con.Open();
-                    cmd = new SqlCommand("insert into BOOKS values( @username,@artTitle,@artWidth,@artHeight, @artPrice, @artType, @artDescription, @artImage, @artAvailable, @dateAdded)", cn);
+                    cmd = new SqlCommand("insert into BOOKS values( @username,@artTitle,@artWidth,@artHeight, @artPrice, @artType, @artDescription, @artImage, @artAvailable, @dateAdded)", con);
                     //cmd.Parameters.AddWithValue("bookId", bookID);
                     cmd.Parameters.AddWithValue("username", username);
                     cmd.Parameters.AddWithValue("artTitle", ArtTitle);

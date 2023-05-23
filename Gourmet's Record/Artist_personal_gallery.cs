@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Gourmet_s_Record
 {
     public partial class Artist_personal_gallery : Form
     {
+        SqlConnection con;
+        public static int artID;
         public Artist_personal_gallery()
         {
             InitializeComponent();
@@ -60,6 +63,11 @@ namespace Gourmet_s_Record
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Artist_personal_gallery_Load(object sender, EventArgs e)
+        {
+            con = new SqlConnection();
         }
     }
 }

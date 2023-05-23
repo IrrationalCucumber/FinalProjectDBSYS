@@ -15,6 +15,11 @@ namespace Gourmet_s_Record
 {
     public partial class UpdateArtwork : Form
     {
+        byte[] imageData;
+        SqlCommand cmd;
+        SqlDataReader dr;
+        SqlConnection con;
+        public int id;
         public UpdateArtwork()
         {
             InitializeComponent();
@@ -36,39 +41,28 @@ namespace Gourmet_s_Record
                 if (dr.Read())
                 {
                     dr.Close();
-                    int bookID = Int32.Parse(lbBookId.Text);
-                    string bookTitle = tbBookTitle.Text;
-                    string bookAuthor = tbBookAuthor.Text;
-                    string bookGenre = tbBookGenre.Text;
-                    string bookStatus = "";
-                    string username = SignIn.AccountName;
-                    string date = DateTime.Now.ToString();
-                    string type = "Update Book";
-                    if (rStatusB.Checked)
-                    {
-                        bookStatus = "Borrowed";
-                    }
-                    else if (rStatusA.Checked)
-                    {
-                        bookStatus = "Available";
-                    }
+                    int artID = id;
+                    string username = SignIn.accountName;
+                    string title = tbArtTitle.Text;
+                    string price = tbPrice.Text;
+                    string length = tbLength.Text;
+                    string width = tbWidth.Text;
+                    string desc = tbDescription.Text;
+                    string type = CBArtType.SelectedItem.ToString();
+
                     //string date = DateTime.Now.ToString();
                     //cn.Close();
                     //cn.Open();
-                    cmd = new SqlCommand("update BOOKS " +
-                        "set bookTitle = '" + bookTitle + "', " +
-                        "bookAuthor='" + bookAuthor + "'," +
-                        "bookgenre='" + bookGenre + "'," +
-                        "bookStatus='" + bookStatus + "'" +
-                        "WHERE bookId='" + bookID + "'", cn);
-                    cmd.ExecuteNonQuery();
-                    cmd = new SqlCommand("insert into TRANSACTIONS values(@user, @TransactionType, @bookTitle, @TransactionDate)", cn);
-                    cmd.Parameters.AddWithValue("user", username);
-                    cmd.Parameters.AddWithValue("TransactionType", type);
-                    cmd.Parameters.AddWithValue("bookTitle", bookTitle);
-                    cmd.Parameters.AddWithValue("TransactionDate", DateTime.Now);
+                    cmd = new SqlCommand("update ARTWORKS " +
+                        "set artTitle = '" + title + "', " +
+                        "artPrice='" + price + "'," +
+                        "artLength='" + length + "'," +
+                        "artWidth='" + width + "'" +
+                        "artDescription = '" + desc + "'" +
+                        "artType ='" + type + "'" +
+                        "artImage ='" + imageData + "'" +
+                        "WHERE artID='" + artID + "'", con);
 
-                    cmd.ExecuteNonQuery();
                     //cn.Close();
                     MessageBox.Show("Book information has been updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -82,7 +76,17 @@ namespace Gourmet_s_Record
 
         private void UpdateArtwork_Load(object sender, EventArgs e)
         {
+            con = new SqlConnection("");
+            con.Open();
 
+            if (AdminHome.artID != 0)
+            {
+                id = AdminHome.artID;
+            }
+            else if (Artist_personal_gallery.artID != 0)
+            {
+                id = Artist_personal_gallery.artID;
+            }
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Gourmet_s_Record
                 string Prov = dr["addressProvince"].ToString();
                 imageData = (byte[])dr["profileImage"];
 
-                tbUsername.Text = Username;
+                //tbUsername.Text = Username;
                 tbLN.Text = LN;
                 tbFN.Text = FN;
                 tbEmail.Text = Email;
@@ -97,11 +97,11 @@ namespace Gourmet_s_Record
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text != string.Empty || tbFN.Text != string.Empty || tbLN.Text != string.Empty || tbEmail.Text != string.Empty || tbCN.Text != string.Empty || tbHouse.Text != string.Empty || tbStreet.Text != string.Empty || tbBrngy.Text != string.Empty || tbCity.Text != string.Empty || tbProv.Text != string.Empty)
+            if ( tbFN.Text != string.Empty || tbLN.Text != string.Empty || tbEmail.Text != string.Empty || tbCN.Text != string.Empty || tbHouse.Text != string.Empty || tbStreet.Text != string.Empty || tbBrngy.Text != string.Empty || tbCity.Text != string.Empty || tbProv.Text != string.Empty)
             {
 
                 dr.Close();
-                string Username = tbUsername.Text;
+                string Username = SignIn.accountName;
                 string FN = tbFN.Text;
                 string LN = tbLN.Text;
                 string Email = tbEmail.Text;
@@ -144,7 +144,7 @@ namespace Gourmet_s_Record
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            tbUsername.ReadOnly = false;
+            //tbUsername.ReadOnly = false;
             tbLN.ReadOnly = false;
             tbFN.ReadOnly = false;
             tbEmail.ReadOnly = false;

@@ -14,6 +14,7 @@ namespace Gourmet_s_Record
     public partial class AdminHome : Form
     {
         SqlConnection cn;
+        public static int artID;
         public AdminHome()
         {
             InitializeComponent();
