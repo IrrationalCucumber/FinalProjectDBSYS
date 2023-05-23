@@ -50,7 +50,6 @@ namespace Gourmet_s_Record
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbUsername = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnGallery = new System.Windows.Forms.Button();
             this.btUpload = new System.Windows.Forms.Button();
@@ -61,10 +60,15 @@ namespace Gourmet_s_Record
             this.btnHome = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -291,25 +295,12 @@ namespace Gourmet_s_Record
             this.label2.TabIndex = 83;
             this.label2.Text = "Firstname";
             // 
-            // lbUsername
-            // 
-            this.lbUsername.AutoSize = true;
-            this.lbUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lbUsername.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(273, 83);
-            this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(22, 24);
-            this.lbUsername.TabIndex = 82;
-            this.lbUsername.Text = "//";
-            this.lbUsername.Click += new System.EventHandler(this.lbUsername_Click);
-            // 
             // btnOrder
             // 
             this.btnOrder.BackColor = System.Drawing.Color.RosyBrown;
             this.btnOrder.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOrder.Location = new System.Drawing.Point(33, 91);
+            this.btnOrder.Location = new System.Drawing.Point(33, 110);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(192, 37);
             this.btnOrder.TabIndex = 103;
@@ -322,7 +313,7 @@ namespace Gourmet_s_Record
             this.btnGallery.BackColor = System.Drawing.Color.RosyBrown;
             this.btnGallery.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnGallery.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGallery.Location = new System.Drawing.Point(33, 134);
+            this.btnGallery.Location = new System.Drawing.Point(33, 153);
             this.btnGallery.Name = "btnGallery";
             this.btnGallery.Size = new System.Drawing.Size(192, 37);
             this.btnGallery.TabIndex = 104;
@@ -385,11 +376,11 @@ namespace Gourmet_s_Record
             // 
             // btnHome
             // 
-            this.btnHome.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.kindpng_822748;
+            this.btnHome.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.Untitled18_20221019160221;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.Location = new System.Drawing.Point(33, 29);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(52, 48);
+            this.btnHome.Size = new System.Drawing.Size(93, 75);
             this.btnHome.TabIndex = 110;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -411,6 +402,43 @@ namespace Gourmet_s_Record
             this.pictureBox4.Size = new System.Drawing.Size(76, 240);
             this.pictureBox4.TabIndex = 112;
             this.pictureBox4.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.RosyBrown;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.accountToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(140, 47);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(142, 32);
+            this.menuStrip1.TabIndex = 113;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editPasswordToolStripMenuItem,
+            this.signOutToolStripMenuItem});
+            this.accountToolStripMenuItem.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold);
+            this.accountToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(134, 28);
+            this.accountToolStripMenuItem.Text = "Account";
+            // 
+            // editPasswordToolStripMenuItem
+            // 
+            this.editPasswordToolStripMenuItem.Name = "editPasswordToolStripMenuItem";
+            this.editPasswordToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
+            this.editPasswordToolStripMenuItem.Text = "Edit Password";
+            // 
+            // signOutToolStripMenuItem
+            // 
+            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(287, 34);
+            this.signOutToolStripMenuItem.Text = "Sign Out";
             // 
             // UserProfile
             // 
@@ -448,9 +476,10 @@ namespace Gourmet_s_Record
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserProfile";
             this.Text = "User Profile";
@@ -459,6 +488,8 @@ namespace Gourmet_s_Record
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,7 +517,6 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnGallery;
         private System.Windows.Forms.Button btUpload;
@@ -497,5 +527,9 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
     }
 }

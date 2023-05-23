@@ -53,42 +53,47 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(590, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(885, 46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 227);
+            this.pictureBox1.Size = new System.Drawing.Size(321, 349);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
             // TbArtist
             // 
-            this.TbArtist.Location = new System.Drawing.Point(681, 322);
+            this.TbArtist.Location = new System.Drawing.Point(1022, 495);
+            this.TbArtist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TbArtist.Name = "TbArtist";
-            this.TbArtist.Size = new System.Drawing.Size(125, 20);
+            this.TbArtist.Size = new System.Drawing.Size(186, 26);
             this.TbArtist.TabIndex = 48;
             this.TbArtist.TextChanged += new System.EventHandler(this.TbArtist_TextChanged);
             // 
             // tbArtworkTitle
             // 
-            this.tbArtworkTitle.Location = new System.Drawing.Point(681, 296);
+            this.tbArtworkTitle.Location = new System.Drawing.Point(1022, 455);
+            this.tbArtworkTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbArtworkTitle.Name = "tbArtworkTitle";
-            this.tbArtworkTitle.Size = new System.Drawing.Size(125, 20);
+            this.tbArtworkTitle.Size = new System.Drawing.Size(186, 26);
             this.tbArtworkTitle.TabIndex = 47;
             // 
             // dtp
             // 
-            this.dtp.Location = new System.Drawing.Point(404, 30);
+            this.dtp.Location = new System.Drawing.Point(608, 46);
+            this.dtp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtp.Name = "dtp";
-            this.dtp.Size = new System.Drawing.Size(176, 20);
+            this.dtp.Size = new System.Drawing.Size(262, 26);
             this.dtp.TabIndex = 46;
             this.dtp.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // tbVerify
             // 
             this.tbVerify.AutoSize = true;
-            this.tbVerify.Location = new System.Drawing.Point(681, 356);
+            this.tbVerify.Location = new System.Drawing.Point(1022, 548);
+            this.tbVerify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbVerify.Name = "tbVerify";
-            this.tbVerify.Size = new System.Drawing.Size(60, 17);
+            this.tbVerify.Size = new System.Drawing.Size(88, 24);
             this.tbVerify.TabIndex = 45;
             this.tbVerify.TabStop = true;
             this.tbVerify.Text = "Verified";
@@ -99,9 +104,10 @@
             this.btnDelete.BackColor = System.Drawing.Color.RosyBrown;
             this.btnDelete.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(643, 426);
+            this.btnDelete.Location = new System.Drawing.Point(964, 655);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(128, 24);
+            this.btnDelete.Size = new System.Drawing.Size(192, 37);
             this.btnDelete.TabIndex = 44;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -112,9 +118,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.RosyBrown;
             this.btnUpdate.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdate.Location = new System.Drawing.Point(643, 396);
+            this.btnUpdate.Location = new System.Drawing.Point(964, 609);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(128, 24);
+            this.btnUpdate.Size = new System.Drawing.Size(192, 37);
             this.btnUpdate.TabIndex = 43;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -123,54 +130,60 @@
             // lbVerify
             // 
             this.lbVerify.AutoSize = true;
-            this.lbVerify.Location = new System.Drawing.Point(587, 359);
+            this.lbVerify.Location = new System.Drawing.Point(880, 552);
+            this.lbVerify.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbVerify.Name = "lbVerify";
-            this.lbVerify.Size = new System.Drawing.Size(59, 13);
+            this.lbVerify.Size = new System.Drawing.Size(88, 20);
             this.lbVerify.TabIndex = 42;
             this.lbVerify.Text = "Verification";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(587, 325);
+            this.label3.Location = new System.Drawing.Point(880, 500);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(46, 20);
             this.label3.TabIndex = 41;
             this.label3.Text = "Artist";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(587, 303);
+            this.label2.Location = new System.Drawing.Point(880, 466);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 40;
             this.label2.Text = "Artwork Title";
             // 
             // cbVerified
             // 
             this.cbVerified.AutoSize = true;
-            this.cbVerified.Location = new System.Drawing.Point(404, 59);
+            this.cbVerified.Location = new System.Drawing.Point(608, 91);
+            this.cbVerified.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbVerified.Name = "cbVerified";
-            this.cbVerified.Size = new System.Drawing.Size(61, 17);
+            this.cbVerified.Size = new System.Drawing.Size(89, 24);
             this.cbVerified.TabIndex = 39;
             this.cbVerified.Text = "Verified";
             this.cbVerified.UseVisualStyleBackColor = true;
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(75, 30);
+            this.tbSearch.Location = new System.Drawing.Point(133, 46);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(325, 20);
+            this.tbSearch.Size = new System.Drawing.Size(467, 26);
             this.tbSearch.TabIndex = 37;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 175);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 341);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 525);
             this.dataGridView1.TabIndex = 36;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -181,21 +194,21 @@
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRefresh.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRefresh.Location = new System.Drawing.Point(535, 83);
+            this.btnRefresh.Location = new System.Drawing.Point(802, 128);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(35, 29);
+            this.btnRefresh.Size = new System.Drawing.Size(52, 45);
             this.btnRefresh.TabIndex = 50;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnHome
             // 
-            this.btnHome.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.kindpng_822748;
+            this.btnHome.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.Untitled18_20221019160221;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHome.Location = new System.Drawing.Point(22, 30);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Location = new System.Drawing.Point(30, 46);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(35, 31);
+            this.btnHome.Size = new System.Drawing.Size(93, 75);
             this.btnHome.TabIndex = 51;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -205,9 +218,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSearch.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearch.Location = new System.Drawing.Point(76, 56);
+            this.btnSearch.Location = new System.Drawing.Point(135, 86);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(112, 35);
             this.btnSearch.TabIndex = 52;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -216,25 +230,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(587, 274);
+            this.label1.Location = new System.Drawing.Point(880, 422);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 53;
             this.label1.Text = "Artwork ID";
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(681, 271);
+            this.tbID.Location = new System.Drawing.Point(1022, 417);
+            this.tbID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(125, 20);
+            this.tbID.Size = new System.Drawing.Size(186, 26);
             this.tbID.TabIndex = 54;
             // 
             // Account_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(825, 468);
+            this.ClientSize = new System.Drawing.Size(1238, 720);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSearch);
@@ -253,7 +269,6 @@
             this.Controls.Add(this.cbVerified);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Account_List";
             this.Text = "Artwork List";
             this.Load += new System.EventHandler(this.Account_List_Load);
