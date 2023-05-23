@@ -1,62 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Gourmet_s_Record
+public static class Encryption
 {
-    class Encryption
+    private static readonly byte[] EncryptionKey = { 0x25, 0x5A, 0x19, 0x61, 0x2F, 0x3C, 0x17, 0x95, 0x7B, 0x4E, 0x09, 0x3D, 0x5F, 0x62, 0x6D, 0x38 };
+    private static readonly byte[] IV = { 0x58, 0x3E, 0x1D, 0x7F, 0x14, 0x3C, 0x71, 0x9C, 0x2E, 0x6F, 0x1A, 0x6B, 0x4F, 0x36, 0x2D, 0x1E };
+
+    public static string Encrypt(string plainText)
     {
-        public static string Encrypt(string encryptString)
+        byte[] encryptedBytes;
+
+        using (Aes aes = Aes.Create())
         {
-            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";  //we can change the code converstion key as per our requirement    
-            byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
-            using (Aes encryptor = Aes.Create())
+            aes.Key = EncryptionKey;
+            aes.IV = IV;
+
+            ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+
+            using (MemoryStream ms = new MemoryStream())
             {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] {
-            0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76
-        });
-                encryptor.Key = pdb.GetBytes(32);
-                encryptor.IV = pdb.GetBytes(16);
-                using (MemoryStream ms = new MemoryStream())
+                using (CryptoStream cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
+                using (StreamWriter writer = new StreamWriter(cs))
                 {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(clearBytes, 0, clearBytes.Length);
-                        cs.Close();
-                    }
-                    encryptString = Convert.ToBase64String(ms.ToArray());
+                    writer.Write(plainText);
                 }
+
+                encryptedBytes = ms.ToArray();
             }
-            return encryptString;
         }
 
-        public static string Decrypt(string cipherText)
+        return Convert.ToBase64String(encryptedBytes);
+    }
+
+    public static string Decrypt(string encryptedText)
+    {
+        byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
+        string decryptedText;
+
+        using (Aes aes = Aes.Create())
         {
-            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";  //we can change the code converstion key as per our requirement, but the decryption key should be same as encryption key    
-            cipherText = cipherText.Replace(" ", "+");
-            byte[] cipherBytes = Convert.FromBase64String(cipherText);
-            using (Aes encryptor = Aes.Create())
+            aes.Key = EncryptionKey;
+            aes.IV = IV;
+
+            ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+
+            using (MemoryStream ms = new MemoryStream(encryptedBytes))
+            using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+            using (StreamReader reader = new StreamReader(cs))
             {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] {
-            0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76
-        });
-                encryptor.Key = pdb.GetBytes(32);
-                encryptor.IV = pdb.GetBytes(16);
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(cipherBytes, 0, cipherBytes.Length);
-                        cs.Close();
-                    }
-                    cipherText = Encoding.Unicode.GetString(ms.ToArray());
-                }
+                decryptedText = reader.ReadToEnd();
             }
-            return cipherText;
         }
+
+        return decryptedText;
     }
 }

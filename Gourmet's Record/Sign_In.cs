@@ -21,13 +21,14 @@ namespace Gourmet_s_Record
         public static bool isAdmin;
         public static bool isArtist;
         public static bool isBuyer;
+        SqlConnection con;
 
 
         public SignIn()
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
         public void gotoHome(object obj)
         {
             Application.Run(new General_Home());
@@ -36,20 +37,28 @@ namespace Gourmet_s_Record
         {
             Application.Run(new AdminHome());
         }
+        public void gotoSignUp(object obj)
+        {
+            Application.Run(new Sign_Up());
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            con.Open();
         }
+
 
         private void btSignIn_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 SqlCommand CheckifExist = new SqlCommand("Select * from ACCOUNTS where username = '" + tbUsername.Text + "' and password='" + tbPassword.Text + "'", con);
                 CheckifExist.Parameters.AddWithValue("@username", tbUsername.Text);
+               // CheckifExist.Parameters.AddWithValue("@password", Encryption.Decrypt(tbPassword.Text));
                 CheckifExist.Parameters.AddWithValue("@password", tbPassword.Text);
 
                 CheckifExist.Connection = con;
+            con.Close();
                 con.Open();
                 SqlDataReader dt = CheckifExist.ExecuteReader();
                 if (tbUsername.Text == "" && tbPassword.Text == "")
@@ -103,11 +112,11 @@ namespace Gourmet_s_Record
                     }
                 }
                 con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+//}
+            //catch (Exception ex)
+            //{
+                //MessageBox.Show(ex.Message);
+            //
 
         }
         //method to determin the account type
@@ -118,6 +127,7 @@ namespace Gourmet_s_Record
 
             using (con)
             {
+                con.Close();
                 con.Open();
 
                 using (SqlCommand command = new SqlCommand(query, con))
@@ -138,9 +148,10 @@ namespace Gourmet_s_Record
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Sign_Up su = new Sign_Up();
             this.Close();
-            su.Show();
+            th = new Thread(gotoSignUp);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
 
         }
     }

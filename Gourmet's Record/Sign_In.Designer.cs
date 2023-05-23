@@ -157,7 +157,6 @@ namespace Gourmet_s_Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.download2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(446, 436);
             this.Controls.Add(this.linkLabel1);
