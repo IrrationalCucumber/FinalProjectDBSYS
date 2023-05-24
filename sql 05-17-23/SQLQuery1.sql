@@ -74,3 +74,8 @@ artAvailable = ""
 WHERE artID =  AND username = ""
 
 --query for updating ACCOUNT
+
+delete FROM ACCOUNTS WHERE username = 'adrean'
+
+ALTER TABLE ACCOUNTS
+ALTER COLUMN password varchar(50)

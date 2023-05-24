@@ -28,48 +28,55 @@ namespace Gourmet_s_Record
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            // con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
             con.Open();
-            
-            if(SignIn.isBuyer == true)
+
+            if (SignIn.isBuyer == true)
             {
                 btnGallery.Visible = false;
             }
-
-            cmd = new SqlCommand("SELECT username, LastName, FirstName, email, contactNum, userBio, addressProvince, addressCity, addressBarangay, addressStreet, addressHome, profileImage" +
-                "WHERE username = '"+ SignIn.accountName +"'",con);
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            try
             {
-                string Username = dr["username"].ToString();
-                string FN = dr["FirstName"].ToString();
-                string LN = dr["LastName"].ToString();
-                string Email = dr["email"].ToString();
-                string CN = dr["contactNum"].ToString();
-                string bio = dr["userBio"].ToString();
-                string House = dr["addressHome"].ToString();
-                string Street = dr["addressStreet"].ToString();
-                string Brngy = dr["addressBarangay"].ToString();
-                string city = dr["addressCity"].ToString();
-                string Prov = dr["addressProvince"].ToString();
-                imageData = (byte[])dr["profileImage"];
-
-                //tbUsername.Text = Username;
-                tbLN.Text = LN;
-                tbFN.Text = FN;
-                tbEmail.Text = Email;
-                tbCN.Text = CN;
-                tbBio.Text = bio;
-                tbHouse.Text = House;
-                tbStreet.Text = Street;
-                tbBrngy.Text = Brngy;
-                tbCity.Text = city;
-                tbProv.Text = Prov;
-                using (MemoryStream ms = new MemoryStream(imageData))
+                cmd = new SqlCommand("SELECT username, LastName, FirstName, email, contactNum, userBio, addressProvince, addressCity, addressBarangay, addressStreet, addressHome, profileImage" +
+                    "WHERE username = '" + SignIn.accountName + "'", con);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
                 {
-                    // Set the image of the picture box
-                    pbProfilePic.Image = Image.FromStream(ms);
+                    string Username = dr["username"].ToString();
+                    string FN = dr["FirstName"].ToString();
+                    string LN = dr["LastName"].ToString();
+                    string Email = dr["email"].ToString();
+                    string CN = dr["contactNum"].ToString();
+                    string bio = dr["userBio"].ToString();
+                    string House = dr["addressHome"].ToString();
+                    string Street = dr["addressStreet"].ToString();
+                    string Brngy = dr["addressBarangay"].ToString();
+                    string city = dr["addressCity"].ToString();
+                    string Prov = dr["addressProvince"].ToString();
+                    imageData = (byte[])dr["profileImage"];
+
+                    //tbUsername.Text = Username;
+                    tbLN.Text = LN;
+                    tbFN.Text = FN;
+                    tbEmail.Text = Email;
+                    tbCN.Text = CN;
+                    tbBio.Text = bio;
+                    tbHouse.Text = House;
+                    tbStreet.Text = Street;
+                    tbBrngy.Text = Brngy;
+                    tbCity.Text = city;
+                    tbProv.Text = Prov;
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        // Set the image of the picture box
+                        pbProfilePic.Image = Image.FromStream(ms);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);         
             }
         }
 

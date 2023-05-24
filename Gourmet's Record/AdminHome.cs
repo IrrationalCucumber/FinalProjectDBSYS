@@ -265,5 +265,14 @@ namespace Gourmet_s_Record
                 //dataGridView1.DataSource = dtbl;
             }
         }
+
+        private void cbStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artType = '" + cbFilter.SelectedItem.ToString() + "' AND artVerification = 'verified'", cn);
+            DataTable dtbl = new DataTable();
+            sqlData.Fill(dtbl);
+
+            //dataGridView1.DataSource = dtbl;
+        }
     }
 }

@@ -31,6 +31,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbStyle = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbPriceRange6 = new System.Windows.Forms.CheckBox();
             this.cbPriceRange5 = new System.Windows.Forms.CheckBox();
@@ -46,15 +48,13 @@
             this.msName = new System.Windows.Forms.ToolStripMenuItem();
             this.accountListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbStyle = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -97,6 +97,35 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FILTER";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.PeachPuff;
+            this.groupBox3.Controls.Add(this.cbStyle);
+            this.groupBox3.Location = new System.Drawing.Point(10, 295);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(274, 79);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Style";
+            // 
+            // cbStyle
+            // 
+            this.cbStyle.FormattingEnabled = true;
+            this.cbStyle.Items.AddRange(new object[] {
+            "Watercolor painting",
+            "Acrylic painting",
+            "Oil painting",
+            "Spray painting",
+            "Sculpture",
+            "Digital Art"});
+            this.cbStyle.Location = new System.Drawing.Point(16, 27);
+            this.cbStyle.Name = "cbStyle";
+            this.cbStyle.Size = new System.Drawing.Size(242, 28);
+            this.cbStyle.TabIndex = 0;
+            this.cbStyle.SelectedIndexChanged += new System.EventHandler(this.cbStyle_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -275,34 +304,6 @@
             this.mToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
             this.mToolStripMenuItem.Text = "Artwork List";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.PeachPuff;
-            this.groupBox3.Controls.Add(this.cbStyle);
-            this.groupBox3.Location = new System.Drawing.Point(10, 295);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(274, 79);
-            this.groupBox3.TabIndex = 18;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Style";
-            // 
-            // cbStyle
-            // 
-            this.cbStyle.FormattingEnabled = true;
-            this.cbStyle.Items.AddRange(new object[] {
-            "Watercolor painting",
-            "Acrylic painting",
-            "Oil painting",
-            "Spray painting",
-            "Sculpture",
-            "Digital Art"});
-            this.cbStyle.Location = new System.Drawing.Point(16, 27);
-            this.cbStyle.Name = "cbStyle";
-            this.cbStyle.Size = new System.Drawing.Size(242, 28);
-            this.cbStyle.TabIndex = 0;
-            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -320,13 +321,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
