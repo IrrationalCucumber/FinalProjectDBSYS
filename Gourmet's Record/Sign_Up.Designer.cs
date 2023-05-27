@@ -126,6 +126,7 @@ namespace Gourmet_s_Record
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(292, 20);
             this.tbPassword.TabIndex = 18;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // tbUsername
             // 
@@ -162,8 +163,8 @@ namespace Gourmet_s_Record
             // 
             this.cbAcctType.FormattingEnabled = true;
             this.cbAcctType.Items.AddRange(new object[] {
-            "ARTIST",
-            "BUYER"});
+            "Artist",
+            "Buyer"});
             this.cbAcctType.Location = new System.Drawing.Point(93, 87);
             this.cbAcctType.Margin = new System.Windows.Forms.Padding(2);
             this.cbAcctType.Name = "cbAcctType";
@@ -188,6 +189,7 @@ namespace Gourmet_s_Record
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.Size = new System.Drawing.Size(292, 20);
             this.tbConfirm.TabIndex = 36;
+            this.tbConfirm.UseSystemPasswordChar = true;
             // 
             // lbMessage
             // 

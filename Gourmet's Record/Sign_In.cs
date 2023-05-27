@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gourmet_s_Record
@@ -44,8 +36,8 @@ namespace Gourmet_s_Record
         private void Form1_Load(object sender, EventArgs e)
         {
             // con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
-            //con.Open();
-            con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            con = new SqlConnection("Data Source=LAPTOP-I525U4NK\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            //con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
             con.Open();
         }
 
@@ -54,70 +46,71 @@ namespace Gourmet_s_Record
         {
             //try
             //{
-                SqlCommand CheckifExist = new SqlCommand("Select * from ACCOUNTS where username = '" + tbUsername.Text + "' and password='" + tbPassword.Text + "'", con);
-                CheckifExist.Parameters.AddWithValue("@username", tbUsername.Text);
-               // CheckifExist.Parameters.AddWithValue("@password", Encryption.Decrypt(tbPassword.Text));
-                CheckifExist.Parameters.AddWithValue("@password", tbPassword.Text);
+            SqlCommand CheckifExist = new SqlCommand("Select * from ACCOUNTS where username = '" + tbUsername.Text + "' and password='" + tbPassword.Text + "'", con);
+            CheckifExist.Parameters.AddWithValue("@username", tbUsername.Text);
+            // CheckifExist.Parameters.AddWithValue("@password", Encryption.Decrypt(tbPassword.Text));
+            CheckifExist.Parameters.AddWithValue("@password", tbPassword.Text);
 
-                CheckifExist.Connection = con;
+            CheckifExist.Connection = con;
             con.Close();
-                con.Open();
-                SqlDataReader dt = CheckifExist.ExecuteReader();
-                if (tbUsername.Text == "" && tbPassword.Text == "")
+            con.Open();
+            SqlDataReader dt = CheckifExist.ExecuteReader();
+            if (tbUsername.Text == "" && tbPassword.Text == "")
+            {
+                lbMessage.Visible = true;
+                lbMessage.Text = "Please provide username and password";
+            }
+            else if (!dt.HasRows)
+            {
+                lbMessage.Visible = true;
+                lbMessage.Text = "Username or Password incorrect";
+            }
+
+            else if (dt.HasRows)
+            {
+                string username = tbUsername.Text;
+                string type = GetUserType(username);
+
+                if (type == "admin")
                 {
-                    lbMessage.Visible = true;
-                    lbMessage.Text = "Please provide username and password";
+                    MessageBox.Show("Success! Welcome: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    isAdmin = true;
+                    accountName = tbUsername.Text;
+
+                    this.Hide();
+                    th = new Thread(gotoAdminHome);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
                 }
-                else if (!dt.HasRows)
+
+                else if (type == "Artist")
                 {
-                    lbMessage.Visible = true;
-                    lbMessage.Text = "Username or Password incorrect";
-                }
+                    MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    isArtist = true;
+                    accountName = tbUsername.Text;
+                    this.Close();
+                    th = new Thread(gotoHome);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
 
-                else if (dt.HasRows)
+                }
+                else
                 {
-                    string username = tbUsername.Text;
-                    string type = GetUserType(username);
+                    MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    isBuyer = true;
+                    accountName = tbUsername.Text;
+                    this.Close();
+                    th = new Thread(gotoHome);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
 
-                    if (type == "admin")
-                    {
-                        MessageBox.Show("Success! Welcome: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        isAdmin = true;
-                        accountName = tbUsername.Text;
-                        this.Close();
-                        th = new Thread(gotoAdminHome);
-                        th.SetApartmentState(ApartmentState.STA);
-                        th.Start();
-                    }
-
-                    else if (type == "Artist")
-                    {
-                        MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        isArtist = true;
-                        accountName = tbUsername.Text;
-                        this.Close();
-                        th = new Thread(gotoHome);
-                        th.SetApartmentState(ApartmentState.STA);
-                        th.Start();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Success! Welcome user: " + tbUsername.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        isBuyer = true;
-                        accountName = tbUsername.Text;
-                        this.Close();
-                        th = new Thread(gotoHome);
-                        th.SetApartmentState(ApartmentState.STA);
-                        th.Start();
-
-                    }
                 }
-                con.Close();
-//}
+            }
+            con.Close();
+            //}
             //catch (Exception ex)
             //{
-                //MessageBox.Show(ex.Message);
+            //MessageBox.Show(ex.Message);
             //
 
         }

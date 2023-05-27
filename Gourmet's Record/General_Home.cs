@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gourmet_s_Record
@@ -37,12 +31,12 @@ namespace Gourmet_s_Record
         {
 
         }
-//filter price
+        //filter price
         private void cbPriceRange1_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPriceRange2.Checked == false && cbPriceRange3.Checked == false && cbPriceRange4.Checked == false && cbPriceRange5.Checked == false && cbPriceRange6.Checked == false)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (0,200)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -58,7 +52,7 @@ namespace Gourmet_s_Record
                 cbPriceRange5.Checked = false;
                 cbPriceRange6.Checked = false;
                 cbPriceRange1.Checked = true;
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (0,200)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -72,7 +66,7 @@ namespace Gourmet_s_Record
         {
             if (cbPriceRange1.Checked == false && cbPriceRange3.Checked == false && cbPriceRange4.Checked == false && cbPriceRange5.Checked == false && cbPriceRange6.Checked == false)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (200,400)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -88,7 +82,7 @@ namespace Gourmet_s_Record
                 cbPriceRange4.Checked = false;
                 cbPriceRange5.Checked = false;
                 cbPriceRange6.Checked = false;
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (200,400)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -102,7 +96,7 @@ namespace Gourmet_s_Record
         {
             if (cbPriceRange1.Checked == false && cbPriceRange2.Checked == false && cbPriceRange4.Checked == false && cbPriceRange5.Checked == false && cbPriceRange6.Checked == false)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (400,600)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -118,7 +112,7 @@ namespace Gourmet_s_Record
                 cbPriceRange4.Checked = false;
                 cbPriceRange5.Checked = false;
                 cbPriceRange6.Checked = false;
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (400,600)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -132,7 +126,7 @@ namespace Gourmet_s_Record
         {
             if (cbPriceRange1.Checked == false && cbPriceRange2.Checked == false && cbPriceRange3.Checked == false && cbPriceRange5.Checked == false && cbPriceRange6.Checked == false)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (600,800)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -148,7 +142,7 @@ namespace Gourmet_s_Record
                 cbPriceRange1.Checked = false;
                 cbPriceRange5.Checked = false;
                 cbPriceRange6.Checked = false;
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (600,800)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -162,7 +156,7 @@ namespace Gourmet_s_Record
         {
             if (cbPriceRange1.Checked == false && cbPriceRange2.Checked == false && cbPriceRange3.Checked == false && cbPriceRange4.Checked == false && cbPriceRange6.Checked == false)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (800,1000)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -178,7 +172,7 @@ namespace Gourmet_s_Record
                 cbPriceRange4.Checked = false;
                 cbPriceRange1.Checked = false;
                 cbPriceRange6.Checked = false;
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (800,1000)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -192,7 +186,7 @@ namespace Gourmet_s_Record
         {
             if (cbPriceRange1.Checked == false && cbPriceRange2.Checked == false && cbPriceRange3.Checked == false && cbPriceRange4.Checked == false && cbPriceRange5.Checked == false)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (1000,99999999)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -208,7 +202,7 @@ namespace Gourmet_s_Record
                 cbPriceRange4.Checked = false;
                 cbPriceRange5.Checked = false;
                 cbPriceRange1.Checked = false;
-                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerification = 'verified'" +
+                SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' AND artVerified = 'verified'" +
                     "AND artPrice IN (1000,99999999)" +
                     "ORDER BY artPrice ASC", con);
                 DataTable dtbl = new DataTable();
@@ -218,38 +212,53 @@ namespace Gourmet_s_Record
             }
         }
 
- 
-//buttons
 
-//filter
+        //buttons
+
+        //filter
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-//combobox
+        //combobox
         private void cbStyle_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artTitle = '" + tbSearch.Text + "' OR artVerified = 'verified' AND artType = '" + cbStyle.SelectedItem.ToString() + "'", con);
+            DataTable dtbl = new DataTable();
+            sqlData.Fill(dtbl);
 
+            dataGridView1.DataSource = dtbl;
         }
 
         private void General_Home_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
-            
+            //con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            con = new SqlConnection("Data Source=LAPTOP-I525U4NK\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
             //con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
             con.Open();
+
+            //display all verified artworks
+            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artVerified = 'verified'", con);
+            DataTable dtbl = new DataTable();
+            sqlData.Fill(dtbl);
+
+            //dataGridView1.DataSource = dtbl;
 
             if (SignIn.isBuyer == true || SignIn.isArtist == true)
             {
                 msName.Text = SignIn.accountName;
+
             }
-            else {
+            else
+            {
                 msName.Text = "Sign In";
                 this.Close();
                 th = new Thread(gotoProfile);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
             }
+            if (SignIn.isBuyer == true)
+            { btUpload.Visible = false; }
         }
 
         private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -265,31 +274,31 @@ namespace Gourmet_s_Record
         private void accountListToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            if (SignIn.isBuyer != true || SignIn.isArtist != true)
-            {
-                miProfile.Visible = false;
-            }
-            else {
-                this.Close();
-                th = new Thread(gotoProfile);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            }
+            this.Close();
+            th = new Thread(gotoProfile);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+
         }
 
         private void miSO_Click(object sender, EventArgs e)
         {
-            if (SignIn.isBuyer != true || SignIn.isArtist != true)
-            {
-                miSO.Visible = false;
-            }
-            else
-            {
-                this.Close();
-                th = new Thread(gotoProfile);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            }
+            this.Close();
+            th = new Thread(gotoProfile);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btUpload_Click(object sender, EventArgs e)
+        {
+            Artist_Upload_Artwork upload = new Artist_Upload_Artwork(); ;
+            upload.Show();
         }
     }
 }

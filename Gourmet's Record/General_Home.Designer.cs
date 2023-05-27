@@ -49,6 +49,7 @@ namespace Gourmet_s_Record
             this.msName = new System.Windows.Forms.ToolStripMenuItem();
             this.miProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.miSO = new System.Windows.Forms.ToolStripMenuItem();
+            this.btUpload = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,6 +71,7 @@ namespace Gourmet_s_Record
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FILTER";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox3
             // 
@@ -93,7 +95,7 @@ namespace Gourmet_s_Record
             "Sculpture",
             "Digital Art"});
             this.cbStyle.Location = new System.Drawing.Point(11, 18);
-            this.cbStyle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStyle.Margin = new System.Windows.Forms.Padding(2);
             this.cbStyle.Name = "cbStyle";
             this.cbStyle.Size = new System.Drawing.Size(163, 21);
             this.cbStyle.TabIndex = 0;
@@ -231,7 +233,7 @@ namespace Gourmet_s_Record
             this.pictureBox1.BackgroundImage = global::Gourmet_s_Record.Properties.Resources.Untitled18_20221019160221;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(14, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 56);
             this.pictureBox1.TabIndex = 7;
@@ -242,7 +244,7 @@ namespace Gourmet_s_Record
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(14, 87);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -260,7 +262,7 @@ namespace Gourmet_s_Record
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menu.Size = new System.Drawing.Size(233, 40);
+            this.menu.Size = new System.Drawing.Size(113, 40);
             this.menu.TabIndex = 11;
             this.menu.Text = "menuStrip1";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
@@ -279,16 +281,29 @@ namespace Gourmet_s_Record
             // miProfile
             // 
             this.miProfile.Name = "miProfile";
-            this.miProfile.Size = new System.Drawing.Size(180, 22);
+            this.miProfile.Size = new System.Drawing.Size(120, 22);
             this.miProfile.Text = "Profile";
             this.miProfile.Click += new System.EventHandler(this.accountListToolStripMenuItem_Click);
             // 
             // miSO
             // 
             this.miSO.Name = "miSO";
-            this.miSO.Size = new System.Drawing.Size(180, 22);
+            this.miSO.Size = new System.Drawing.Size(120, 22);
             this.miSO.Text = "Sign Out";
             this.miSO.Click += new System.EventHandler(this.miSO_Click);
+            // 
+            // btUpload
+            // 
+            this.btUpload.BackColor = System.Drawing.Color.RosyBrown;
+            this.btUpload.Font = new System.Drawing.Font("Perpetua Titling MT", 8F, System.Drawing.FontStyle.Bold);
+            this.btUpload.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btUpload.Location = new System.Drawing.Point(764, 396);
+            this.btUpload.Name = "btUpload";
+            this.btUpload.Size = new System.Drawing.Size(67, 42);
+            this.btUpload.TabIndex = 54;
+            this.btUpload.Text = "Upload";
+            this.btUpload.UseVisualStyleBackColor = false;
+            this.btUpload.Click += new System.EventHandler(this.btUpload_Click);
             // 
             // General_Home
             // 
@@ -296,6 +311,7 @@ namespace Gourmet_s_Record
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(855, 450);
+            this.Controls.Add(this.btUpload);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -341,5 +357,6 @@ namespace Gourmet_s_Record
         private System.Windows.Forms.ToolStripMenuItem msName;
         private System.Windows.Forms.ToolStripMenuItem miProfile;
         private System.Windows.Forms.ToolStripMenuItem miSO;
+        private System.Windows.Forms.Button btUpload;
     }
 }

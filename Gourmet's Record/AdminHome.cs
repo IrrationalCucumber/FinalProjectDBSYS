@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Gourmet_s_Record
@@ -14,31 +10,16 @@ namespace Gourmet_s_Record
     public partial class AdminHome : Form
     {
         SqlConnection cn;
+        Thread th;
         public static int artID;
         public AdminHome()
         {
             InitializeComponent();
         }
-
-        private void msName_Click(object sender, EventArgs e)
+        public void gotoArtList(object obj)
         {
-
+            Application.Run(new adminArtworkList());
         }
-
-        private void accountListToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UserList userList = new UserList();
-            this.Close();
-            userList.Show();
-        }
-
-        private void mToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Account_List accountList = new Account_List();
-            this.Close();
-            accountList.Show();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (cbFilter.SelectedItem.Equals("Artist"))
@@ -66,15 +47,17 @@ namespace Gourmet_s_Record
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            // con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            cn = new SqlConnection("Data Source=LAPTOP-I525U4NK\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            //con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
             cn.Open();
-
             msName.Text = SignIn.accountName;
-        }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+            SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ARTWORKS WHERE artVerified = 'verified'", cn);
+            DataTable dtbl = new DataTable();
+            sqlData.Fill(dtbl);
 
+            dataGridView1.DataSource = dtbl;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -273,6 +256,19 @@ namespace Gourmet_s_Record
             sqlData.Fill(dtbl);
 
             //dataGridView1.DataSource = dtbl;
+        }
+
+        private void mToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            th = new Thread(gotoArtList);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void accountListToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

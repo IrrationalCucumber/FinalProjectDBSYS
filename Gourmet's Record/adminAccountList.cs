@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gourmet_s_Record
@@ -71,7 +65,7 @@ namespace Gourmet_s_Record
 
                 //dataGridView1.DataSource = dtbl;
             }
-        
+
         }
 
         private void tbUsername_TextChanged(object sender, EventArgs e)
@@ -83,7 +77,7 @@ namespace Gourmet_s_Record
         {
 
         }
-//verify
+        //verify
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -96,7 +90,8 @@ namespace Gourmet_s_Record
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (cbVerified.Checked == true) {
+            if (cbVerified.Checked == true)
+            {
                 string date = dtp.Value.ToString("yyyy-MM-dd"); // format the date value as yyyy-MM-dd
                 SqlDataAdapter sqlData = new SqlDataAdapter("SELECT * from ACCOUNTS WHERE username = '" + tbSearch.Text + "' AND accountVerified = 'verified'AND dateAdded = @date", cn);
                 sqlData.SelectCommand.Parameters.AddWithValue("@date", date); // use a parameterized query to avoid SQL injection
@@ -116,7 +111,7 @@ namespace Gourmet_s_Record
                 //dataGridView1.DataSource = dtbl;
             }
         }
-//datagrid
+        //datagrid
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -101,11 +101,11 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Artwork_List.cs">
+    <Compile Include="adminArtworkList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Artwork_List.Designer.cs">
-      <DependentUpon>Admin_Artwork_List.cs</DependentUpon>
+    <Compile Include="adminArtworkList.Designer.cs">
+      <DependentUpon>adminArtworkList.cs</DependentUpon>
     </Compile>
     <Compile Include="Artist_personal_gallery.cs">
       <SubType>Form</SubType>
@@ -176,11 +176,11 @@
     <Compile Include="Update_Password.Designer.cs">
       <DependentUpon>Update_Password.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Account_List.cs">
+    <Compile Include="adminAccountList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Account_List.Designer.cs">
-      <DependentUpon>Admin_Account_List.cs</DependentUpon>
+    <Compile Include="adminAccountList.Designer.cs">
+      <DependentUpon>adminAccountList.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="Artist_Upload_Artwork.resx">
       <DependentUpon>Artist_Upload_Artwork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Artwork_List.resx">
-      <DependentUpon>Admin_Artwork_List.cs</DependentUpon>
+    <EmbeddedResource Include="adminArtworkList.resx">
+      <DependentUpon>adminArtworkList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buyer_Transaction.resx">
       <DependentUpon>Buyer_Transaction.cs</DependentUpon>
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="Update_Password.resx">
       <DependentUpon>Update_Password.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Account_List.resx">
-      <DependentUpon>Admin_Account_List.cs</DependentUpon>
+    <EmbeddedResource Include="adminAccountList.resx">
+      <DependentUpon>adminAccountList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

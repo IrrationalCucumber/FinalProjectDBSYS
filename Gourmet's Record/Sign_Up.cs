@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gourmet_s_Record
@@ -22,7 +15,7 @@ namespace Gourmet_s_Record
         {
             InitializeComponent();
         }
-        
+
         public int userID;
 
         public void gotoSignIn(object obj)
@@ -31,9 +24,9 @@ namespace Gourmet_s_Record
         }
         private void SignUp_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
-            //con.Open();
-           // con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            // con = new SqlConnection("Data Source=DESKTOP-GTBF9M5;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            con = new SqlConnection("Data Source=LAPTOP-I525U4NK\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
+            // con = new SqlConnection("Data Source=DESKTOP-01\\SQLEXPRESS;Initial Catalog=online_art_gallery_database_final;Integrated Security=True");
             con.Open();
         }
 
@@ -106,7 +99,7 @@ namespace Gourmet_s_Record
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
 

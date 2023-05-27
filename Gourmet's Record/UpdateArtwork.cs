@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Gourmet_s_Record
 {
@@ -36,7 +27,7 @@ namespace Gourmet_s_Record
         {
             if (tbArtTitle.Text != string.Empty || tbDescription.Text != string.Empty || tbLength.Text != string.Empty || tbPrice.Text != string.Empty || tbWidth.Text != string.Empty)
             {
-             //   cmd = new SqlCommand("select * from ARTWORK where art='" + tbBookTitle.Text + "' AND bookId ='" + lbBookId.Text + "'", cn);
+                //   cmd = new SqlCommand("select * from ARTWORK where art='" + tbBookTitle.Text + "' AND bookId ='" + lbBookId.Text + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
